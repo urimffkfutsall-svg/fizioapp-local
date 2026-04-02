@@ -390,6 +390,31 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
     setDraft(null);
   };
 
+  const [editOpen,setEditOpen]=useState(false);
+  const [draft,setDraft]=useState(null);
+
+  const openEdit = (c) => {
+    setDraft({
+      ...c,
+      treatmentTypes: Array.isArray(c.treatmentTypes) ? c.treatmentTypes.join(", ") : (c.treatmentTypes || "")
+    });
+    setEditOpen(true);
+  };
+
+  const saveEdit = () => {
+    if(!draft) return;
+    const cleaned = {
+      ...draft,
+      users: Number(draft.users||0),
+      patients: Number(draft.patients||0),
+      revenue: Number(draft.revenue||0),
+      treatmentTypes: String(draft.treatmentTypes||"").split(",").map(s=>s.trim()).filter(Boolean)
+    };
+    onUpdateClinic && onUpdateClinic(cleaned);
+    setEditOpen(false);
+    setDraft(null);
+  };
+
   return (
     <div>
       <div style={{marginBottom:24}}>
@@ -430,6 +455,11 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
                 <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>â‚¬{c.revenue.toLocaleString()}</div>
                 <span style={{padding:"2px 8px",borderRadius:20,fontSize:10,fontWeight:600,background:c.status==="active"?"#F0FDF4":"#F5F5F5",color:c.status==="active"?"#15803D":"#9DABBE"}}>{c.status==="active"?"Aktive":"Joaktive"}</span>
               
+  <div style=display:"flex",gap:8,flexShrink:0,marginLeft:"auto">
+    <button onClick={() => openEdit(c)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #E8ECF2",background:"#fff",cursor:"pointer",fontSize:12,fontWeight:600>Edit</button>
+    <button onClick={() => onDeleteClinic && onDeleteClinic(c.id)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #FECACA",background:"#FEF2F2",cursor:"pointer",fontSize:12,fontWeight:700,color:"#991B1B">Fshij</button>
+  </div>
+
   <div style=display:"flex",gap:8,flexShrink:0,marginLeft:"auto">
     <button onClick={() => openEdit(c)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #E8ECF2",background:"#fff",cursor:"pointer",fontSize:12,fontWeight:600>Edit</button>
     <button onClick={() => onDeleteClinic && onDeleteClinic(c.id)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #FECACA",background:"#FEF2F2",cursor:"pointer",fontSize:12,fontWeight:700,color:"#991B1B">Fshij</button>
@@ -1478,6 +1508,11 @@ const ClinicsPage = ({ clinics, setClinics }) => {
     <button onClick={() => openEdit(c)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #E8ECF2",background:"#fff",cursor:"pointer",fontSize:12,fontWeight:600>Edit</button>
     <button onClick={() => onDeleteClinic && onDeleteClinic(c.id)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #FECACA",background:"#FEF2F2",cursor:"pointer",fontSize:12,fontWeight:700,color:"#991B1B">Fshij</button>
   </div>
+
+  <div style=display:"flex",gap:8,flexShrink:0,marginLeft:"auto">
+    <button onClick={() => openEdit(c)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #E8ECF2",background:"#fff",cursor:"pointer",fontSize:12,fontWeight:600>Edit</button>
+    <button onClick={() => onDeleteClinic && onDeleteClinic(c.id)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #FECACA",background:"#FEF2F2",cursor:"pointer",fontSize:12,fontWeight:700,color:"#991B1B">Fshij</button>
+  </div>
 </div></div>
                 ))}
               </div>
@@ -1862,6 +1897,11 @@ const ReportsPage = ({ clinics }) => {
     <button onClick={() => openEdit(c)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #E8ECF2",background:"#fff",cursor:"pointer",fontSize:12,fontWeight:600>Edit</button>
     <button onClick={() => onDeleteClinic && onDeleteClinic(c.id)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #FECACA",background:"#FEF2F2",cursor:"pointer",fontSize:12,fontWeight:700,color:"#991B1B">Fshij</button>
   </div>
+
+  <div style=display:"flex",gap:8,flexShrink:0,marginLeft:"auto">
+    <button onClick={() => openEdit(c)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #E8ECF2",background:"#fff",cursor:"pointer",fontSize:12,fontWeight:600>Edit</button>
+    <button onClick={() => onDeleteClinic && onDeleteClinic(c.id)} style=padding:"7px 10px",borderRadius:10,border:"1px solid #FECACA",background:"#FEF2F2",cursor:"pointer",fontSize:12,fontWeight:700,color:"#991B1B">Fshij</button>
+  </div>
 </div>
               </div>
             ))}
@@ -1913,6 +1953,16 @@ export default function FizioApp() {
   const [page,setPage]=useState("dashboard");
   const [patientToOpen,setPatientToOpen]=useState(null);
   const [clinics,setClinics]=useState(INITIAL_CLINICS);
+
+  // SUPERADMIN: edit + delete ordinanca (vetem local state)
+  const onDeleteClinic = (id) => {
+    if(!confirm("A je i sigurt qe do ta fshish ordinancen?")) return;
+    setClinics(prev => prev.filter(c => c.id !== id));
+  };
+
+  const onUpdateClinic = (clinic) => {
+    setClinics(prev => prev.map(c => c.id === clinic.id ? clinic : c));
+  };
 
   // SUPERADMIN: edit + delete ordinanca (vetem local state)
   const onDeleteClinic = (id) => {
@@ -2683,6 +2733,12 @@ export default function FizioApp() {
     </div>
   );
 }
+
+
+
+
+
+
 
 
 
