@@ -1,0 +1,14 @@
+﻿const fs = require('fs');
+let t = fs.readFileSync('src/App.jsx','utf8');
+t=t.split('\u00C3\u008B').join('\u00CB');
+t=t.split('\u00C3\u00AB').join('\u00EB');
+t=t.split('\u00C3\u00A7').join('\u00E7');
+t=t.split('\u00C3\u0087').join('\u00C7');
+t=t.split('\u00E2\u0086\u0092').join('\u2192');
+t=t.split('\u00E2\u0086\u00B5').join('\u21B5');
+t=t.split('\u00E2\u0082\u00AC').join('\u20AC');
+t=t.split('\u00E2\u0080\u00A2').join('\u2022');
+t=t.split('\u00E2\u0080\u0093').join('\u2013');
+t=t.split('\u00E2\u0080\u0094').join('\u2014');
+fs.writeFileSync('src/App.jsx',t,'utf8');
+console.log('OK');
