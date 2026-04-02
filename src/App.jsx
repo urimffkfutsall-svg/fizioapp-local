@@ -127,7 +127,7 @@ const StatCard = ({ icon, label, value, change, changeUp, accent }) => {
       </div>
       <div style={{fontSize:26,fontWeight:700,color:"#1A2332",lineHeight:1}}>{value}</div>
       <div style={{fontSize:12,color:"#5A6A7E",marginTop:5}}>{label}</div>
-      {change && <div style={{fontSize:11,fontWeight:600,color:changeUp?"#22C55E":"#EF4444",marginTop:8}}>{changeUp?"â†‘":"â†“"} {change}</div>}
+      {change && <div style={{fontSize:11,fontWeight:600,color:changeUp?"#22C55E":"#EF4444",marginTop:8}}>{changeUp?"↑":"â†“"} {change}</div>}
     </div>
   );
 };
@@ -286,7 +286,7 @@ const LoginPage = ({ onLogin }) => {
           </div>
           <button onClick={handleLogin} disabled={loading}
             style={{width:"100%",padding:"13px",background:loading?"#93C5FD":"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:10,fontSize:14,fontWeight:600,cursor:loading?"not-allowed":"pointer",fontFamily:"'DM Sans',sans-serif"}}>
-            {loading?"Duke u identifikuar...":"Hyr â†’"}
+            {loading?"Duke u identifikuar...":"Hyr →"}
           </button>
         </div>
       </div>
@@ -338,7 +338,7 @@ const GlobalSearch = ({ onNavigate }) => {
             style={{padding:"10px 14px",fontSize:12,color:"#2563EB",fontWeight:600,cursor:"pointer",textAlign:"center",background:"#F8FAFF"}}
             onMouseEnter={e=>e.currentTarget.style.background="#EBF4FF"}
             onMouseLeave={e=>e.currentTarget.style.background="#F8FAFF"}>
-            Shiko të gjithë pacientët â†’
+            Shiko të gjithë pacientët →
           </div>
         </div>
       )}
@@ -407,7 +407,7 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
             </div>
             <div style={{fontSize:26,fontWeight:700,color:"#1A2332"}}>{x.value}</div>
             <div style={{fontSize:12,color:"#5A6A7E",marginTop:5}}>{x.label}</div>
-            <div style={{fontSize:11,fontWeight:600,color:"#22C55E",marginTop:8}}>â†‘ {x.change}</div>
+            <div style={{fontSize:11,fontWeight:600,color:"#22C55E",marginTop:8}}>↑ {x.change}</div>
           </div>
         ))}
       </div>
@@ -506,7 +506,7 @@ const Dashboard = ({ user }) => {
           <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
             <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"14px 18px",borderBottom:"1px solid #E8ECF2"}}>
               <span style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>Terminet e Sotme</span>
-              <span style={{fontSize:12,color:"#2563EB",cursor:"pointer",fontWeight:500}}>Shiko të gjitha â†’</span>
+              <span style={{fontSize:12,color:"#2563EB",cursor:"pointer",fontWeight:500}}>Shiko të gjitha →</span>
             </div>
             {today.map(a=>(
               <div key={a.id} style={{display:"flex",alignItems:"center",gap:12,padding:"12px 18px",borderBottom:"1px solid #F5F7FA"}}>
@@ -526,7 +526,7 @@ const Dashboard = ({ user }) => {
           <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
             <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"14px 18px",borderBottom:"1px solid #E8ECF2"}}>
               <span style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>Pacientët e Fundit</span>
-              <span style={{fontSize:12,color:"#2563EB",cursor:"pointer",fontWeight:500}}>Shiko të gjitha â†’</span>
+              <span style={{fontSize:12,color:"#2563EB",cursor:"pointer",fontWeight:500}}>Shiko të gjitha →</span>
             </div>
             {PATIENTS.slice(0,4).map(p=>{
               const pct=Math.round(p.sessions/p.total*100);
@@ -1679,10 +1679,10 @@ const ReportsPage = ({ clinics }) => {
 
   <!-- KPI -->
   <div class="kpi-grid">
-    <div class="kpi"><div class="kpi-icon">ðŸ‘¥</div><div class="kpi-val">${st.patients}</div><div class="kpi-label">Pacientë Aktivë</div><div class="kpi-change">â†‘ +8 vs muajit parë</div></div>
-    <div class="kpi"><div class="kpi-icon">ðŸ“…</div><div class="kpi-val">${st.sessions}</div><div class="kpi-label">Seanca Totale</div><div class="kpi-change">â†‘ +14 vs muajit parë</div></div>
-    <div class="kpi"><div class="kpi-icon">ðŸ’¶</div><div class="kpi-val">€${st.revenue.toLocaleString()}</div><div class="kpi-label">Të Ardhura</div><div class="kpi-change">â†‘ +8.3% rritje</div></div>
-    <div class="kpi"><div class="kpi-icon">âœ…</div><div class="kpi-val">${st.attendance}%</div><div class="kpi-label">Prezenca</div><div class="kpi-change">â†‘ +2.1% muajin</div></div>
+    <div class="kpi"><div class="kpi-icon">ðŸ‘¥</div><div class="kpi-val">${st.patients}</div><div class="kpi-label">Pacientë Aktivë</div><div class="kpi-change">↑ +8 vs muajit parë</div></div>
+    <div class="kpi"><div class="kpi-icon">ðŸ“…</div><div class="kpi-val">${st.sessions}</div><div class="kpi-label">Seanca Totale</div><div class="kpi-change">↑ +14 vs muajit parë</div></div>
+    <div class="kpi"><div class="kpi-icon">ðŸ’¶</div><div class="kpi-val">€${st.revenue.toLocaleString()}</div><div class="kpi-label">Të Ardhura</div><div class="kpi-change">↑ +8.3% rritje</div></div>
+    <div class="kpi"><div class="kpi-icon">âœ…</div><div class="kpi-val">${st.attendance}%</div><div class="kpi-label">Prezenca</div><div class="kpi-change">↑ +2.1% muajin</div></div>
   </div>
 
   <!-- SUMMARY -->
