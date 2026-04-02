@@ -205,7 +205,7 @@ const PinLoginPage = ({ clinics, onLogin, onSwitchToNormal }) => {
         </div>
         {hint
           ?<div style={{fontSize:11,color:"#EF4444",textAlign:"center",marginBottom:6,fontWeight:500}}>{hint}</div>
-          :<div style={{fontSize:11,color:"#9DABBE",textAlign:"center",marginBottom:6}}>Shkruaj kodin PIN (1â€“6 shifra)</div>}
+          :<div style={{fontSize:11,color:"#9DABBE",textAlign:"center",marginBottom:6}}>Shkruaj kodin PIN (1–6 shifra)</div>}
 
         {/* Numpad */}
         <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:9,margin:"14px 0"}}>
@@ -229,7 +229,7 @@ const PinLoginPage = ({ clinics, onLogin, onSwitchToNormal }) => {
         <button onClick={onSwitchToNormal} style={{width:"100%",padding:"12px",background:"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:12,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",marginBottom:12,letterSpacing:".02em"}}>
           â†µ Kyçu si Administrator
         </button>
-        <div style={{fontSize:10,color:"#9DABBE",textAlign:"center"}}>Tastiera (0â€“9) â€¢ Backspace â€¢ Escape për pastrim</div>
+        <div style={{fontSize:10,color:"#9DABBE",textAlign:"center"}}>Tastiera (0–9) • Backspace • Escape për pastrim</div>
       </div>
     </div>
   );
@@ -280,7 +280,7 @@ const LoginPage = ({ onLogin }) => {
           </div>
           <div style={{marginBottom:24}}>
             <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>FJALÃ‹KALIMI</label>
-            <input type="password" value={p} onChange={e=>setP(e.target.value)} onKeyDown={e=>e.key==="Enter"&&handleLogin()} placeholder="â€¢â€¢â€¢â€¢â€¢â€¢"
+            <input type="password" value={p} onChange={e=>setP(e.target.value)} onKeyDown={e=>e.key==="Enter"&&handleLogin()} placeholder="••••••"
               style={{width:"100%",padding:"11px 14px",border:"1.5px solid #E8ECF2",borderRadius:10,fontSize:14,outline:"none",fontFamily:"'DM Sans',sans-serif",color:"#1A2332",boxSizing:"border-box"}}
               onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
           </div>
@@ -1221,7 +1221,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
                 style={{...inputStyle,letterSpacing:adminForm.pin?"8px":"0px",fontWeight:700,fontSize:18}}
                 onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
             </div>
-            <div style={{fontSize:11,color:"#9DABBE",marginTop:6}}>Ky PIN do përdoret për kyçje të shpejtë në ekranin numpad. 1â€“6 shifra.</div>
+            <div style={{fontSize:11,color:"#9DABBE",marginTop:6}}>Ky PIN do përdoret për kyçje të shpejtë në ekranin numpad. 1–6 shifra.</div>
           </div>
           <div style={{padding:"12px 14px",background:"#EBF4FF",border:"1px solid #BFDBFE",borderRadius:10,marginBottom:20}}>
             <div style={{fontSize:11,fontWeight:700,color:"#2563EB",marginBottom:3}}>ðŸ“± Si funksionon kyçja me PIN</div>
