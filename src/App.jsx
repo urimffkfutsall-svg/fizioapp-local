@@ -127,7 +127,7 @@ const StatCard = ({ icon, label, value, change, changeUp, accent }) => {
       </div>
       <div style={{fontSize:26,fontWeight:700,color:"#1A2332",lineHeight:1}}>{value}</div>
       <div style={{fontSize:12,color:"#5A6A7E",marginTop:5}}>{label}</div>
-      {change && <div style={{fontSize:11,fontWeight:600,color:changeUp?"#22C55E":"#EF4444",marginTop:8}}>{changeUp?"↑":"â†“"} {change}</div>}
+      {change && <div style={{fontSize:11,fontWeight:600,color:changeUp?"#22C55E":"#EF4444",marginTop:8}}>{changeUp?"↑":"←“"} {change}</div>}
     </div>
   );
 };
@@ -322,7 +322,7 @@ const GlobalSearch = ({ onNavigate }) => {
                 <Avatar name={p.name} size={34} bg="#EBF4FF" color="#2563EB"/>
                 <div style={{flex:1,minWidth:0}}>
                   <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>{p.name}</div>
-                  <div style={{fontSize:11,color:"#5A6A7E"}}>{p.condition} Â· {p.age} vjeç</div>
+                  <div style={{fontSize:11,color:"#5A6A7E"}}>{p.condition} · {p.age} vjeç</div>
                   <div style={{background:"#F1F3F7",borderRadius:20,height:3,width:80,marginTop:4,overflow:"hidden"}}>
                     <div style={{height:"100%",borderRadius:20,background:"#2563EB",width:`${pct}%`}}/>
                   </div>
@@ -424,7 +424,7 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
               }
               <div style={{flex:1}}>
                 <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>{c.name}</div>
-                <div style={{fontSize:11,color:"#9DABBE"}}>{c.city} Â· {c.patients} pacientë Â· {c.users} përdorues</div>
+                <div style={{fontSize:11,color:"#9DABBE"}}>{c.city} · {c.patients} pacientë · {c.users} përdorues</div>
               </div>
               <div style={{textAlign:"right"}}>
                 <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>€{c.revenue.toLocaleString()}</div>
@@ -487,7 +487,7 @@ const Dashboard = ({ user }) => {
       <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",marginBottom:24,flexWrap:"wrap",gap:12}}>
         <div>
           <h1 style={{fontSize:22,fontWeight:700,color:"#1A2332",margin:0}}>Mirëmbrëma, {user.role==="superadmin"?"Urimi":user.role==="admin"?"Admin":"Fizioterapis"} ðŸ‘‹</h1>
-          <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>E Mërkurë, 1 Prill 2026 Â· Sot keni <strong>{today.length} termine</strong></p>
+          <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>E Mërkurë, 1 Prill 2026 · Sot keni <strong>{today.length} termine</strong></p>
         </div>
         <div style={{display:"flex",gap:8,background:"#F1F3F7",padding:3,borderRadius:10}}>
           {["Sot","Kjo Javë","Ky Muaj"].map((t,i)=>(
@@ -517,7 +517,7 @@ const Dashboard = ({ user }) => {
                 <Avatar name={a.patient} size={34} bg="#EBF4FF" color="#2563EB"/>
                 <div style={{flex:1}}>
                   <div style={{fontSize:13,fontWeight:500,color:"#1A2332"}}>{a.patient}</div>
-                  <div style={{fontSize:11,color:"#5A6A7E"}}>{a.type} Â· {a.therapist}</div>
+                  <div style={{fontSize:11,color:"#5A6A7E"}}>{a.type} · {a.therapist}</div>
                 </div>
                 <Badge status={a.status}/>
               </div>
@@ -535,7 +535,7 @@ const Dashboard = ({ user }) => {
                   <Avatar name={p.name} size={34} bg="#EBF4FF" color="#2563EB"/>
                   <div style={{flex:1}}>
                     <div style={{fontSize:13,fontWeight:500,color:"#1A2332"}}>{p.name}</div>
-                    <div style={{fontSize:11,color:"#5A6A7E"}}>Seanca {p.sessions}/{p.total} Â· {p.condition}</div>
+                    <div style={{fontSize:11,color:"#5A6A7E"}}>Seanca {p.sessions}/{p.total} · {p.condition}</div>
                     <div style={{background:"#F1F3F7",borderRadius:20,height:4,marginTop:6,overflow:"hidden",width:120}}>
                       <div style={{height:"100%",borderRadius:20,background:"#2563EB",width:`${pct}%`}}/>
                     </div>
@@ -617,7 +617,7 @@ const PatientsPage = ({ initialSelected=null }) => {
     return (
       <div>
         <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
-          <button onClick={()=>setSelected(null)} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>â† Kthehu</button>
+          <button onClick={()=>setSelected(null)} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>← Kthehu</button>
           <h1 style={{fontSize:20,fontWeight:700,color:"#1A2332",margin:0}}>Profili i Pacientit</h1>
         </div>
         <div style={{display:"grid",gridTemplateColumns:"300px 1fr",gap:16}}>
@@ -1021,7 +1021,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
       ${logoHtml}
       <div class="clinic-info">
         <div class="name">${clinic.name}</div>
-        <div class="sub">${clinic.city} Â· ${clinic.phone||""}</div>
+        <div class="sub">${clinic.city} · ${clinic.phone||""}</div>
         <div class="sub">${clinic.address||""}</div>
       </div>
     </div>
@@ -1055,7 +1055,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
     <div class="sig-box">Nënshkrimi i Pacientit: ${therapy.patient}</div>
   </div>
   <div class="footer">
-    <span>${clinic.name} Â· ${clinic.city} Â· Fizioapp</span>
+    <span>${clinic.name} · ${clinic.city} · Fizioapp</span>
     <span>Â© Fizioapp 2026 â€” Konfidencial</span>
   </div>
 </div>
@@ -1070,7 +1070,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
     <div>
       {toast&&<div style={{position:"fixed",top:24,right:24,background:"#1A2332",color:"#fff",padding:"12px 20px",borderRadius:10,fontSize:13,fontWeight:500,zIndex:9999,boxShadow:"0 4px 20px rgba(0,0,0,.2)"}}>{toast}</div>}
       <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
-        <button onClick={()=>setView("detail")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>â† Kthehu</button>
+        <button onClick={()=>setView("detail")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>← Kthehu</button>
         <h1 style={{fontSize:20,fontWeight:700,color:"#1A2332",margin:0}}>Shto Terapi â€” {selected.name}</h1>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 320px",gap:20}}>
@@ -1155,7 +1155,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
     <div>
       {toast&&<div style={{position:"fixed",top:24,right:24,background:"#1A2332",color:"#fff",padding:"12px 20px",borderRadius:10,fontSize:13,fontWeight:500,zIndex:9999,boxShadow:"0 4px 20px rgba(0,0,0,.2)"}}>{toast}</div>}
       <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
-        <button onClick={()=>setView("detail")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>â† Kthehu</button>
+        <button onClick={()=>setView("detail")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>← Kthehu</button>
         <h1 style={{fontSize:20,fontWeight:700,color:"#1A2332",margin:0}}>Lloje Trajtimesh â€” {selected.name}</h1>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 340px",gap:20}}>
@@ -1197,7 +1197,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
     <div>
       {toast&&<div style={{position:"fixed",top:24,right:24,background:"#1A2332",color:"#fff",padding:"12px 20px",borderRadius:10,fontSize:13,fontWeight:500,zIndex:9999,boxShadow:"0 4px 20px rgba(0,0,0,.2)"}}>{toast}</div>}
       <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
-        <button onClick={()=>setView("detail")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>â† Kthehu</button>
+        <button onClick={()=>setView("detail")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>← Kthehu</button>
         <h1 style={{fontSize:20,fontWeight:700,color:"#1A2332",margin:0}}>Shto Administrator â€” {selected.name}</h1>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 320px",gap:20}}>
@@ -1244,14 +1244,14 @@ const ClinicsPage = ({ clinics, setClinics }) => {
                   </div>
                   <div style={{flex:1}}>
                     <div style={{fontSize:12,fontWeight:600,color:"#1A2332"}}>{a.name}</div>
-                    <div style={{fontSize:10,color:"#9DABBE"}}>PIN: {a.pin} Â· {a.username}</div>
+                    <div style={{fontSize:10,color:"#9DABBE"}}>PIN: {a.pin} · {a.username}</div>
                   </div>
                 </div>
               ))}
           </div>
           <div style={{background:"#F0FDF4",border:"1px solid #BBF7D0",borderRadius:12,padding:14}}>
             <div style={{fontSize:11,fontWeight:700,color:"#15803D",marginBottom:4}}>âœ“ Siguri e PIN-it</div>
-            <div style={{fontSize:11,color:"#166534"}}>Ã‡do admin ka PIN unik. Sistemi kontrollon automatikisht konfliktet e PIN-it midis ordinancave.</div>
+            <div style={{fontSize:11,color:"#166534"}}>Çdo admin ka PIN unik. Sistemi kontrollon automatikisht konfliktet e PIN-it midis ordinancave.</div>
           </div>
         </div>
       </div>
@@ -1263,7 +1263,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
     <div>
       {toast&&<div style={{position:"fixed",top:24,right:24,background:"#1A2332",color:"#fff",padding:"12px 20px",borderRadius:10,fontSize:13,fontWeight:500,zIndex:9999,boxShadow:"0 4px 20px rgba(0,0,0,.2)"}}>{toast}</div>}
       <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
-        <button onClick={()=>setView("list")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>â† Kthehu</button>
+        <button onClick={()=>setView("list")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>← Kthehu</button>
         <h1 style={{fontSize:20,fontWeight:700,color:"#1A2332",margin:0,flex:1}}>{selected.name}</h1>
         <button onClick={()=>setView("addTherapy")} style={{display:"flex",alignItems:"center",gap:7,padding:"9px 16px",background:"#F0FDF4",color:"#15803D",border:"1px solid #BBF7D0",borderRadius:9,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>
           + Shto Terapi
@@ -1329,7 +1329,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
                   </div>
                   <div style={{flex:1}}>
                     <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>{a.name}</div>
-                    <div style={{fontSize:11,color:"#9DABBE"}}>@{a.username} Â· Admin Ordinancës</div>
+                    <div style={{fontSize:11,color:"#9DABBE"}}>@{a.username} · Admin Ordinancës</div>
                   </div>
                   <div style={{background:"#EBF4FF",borderRadius:10,padding:"6px 14px",textAlign:"center"}}>
                     <div style={{fontSize:10,color:"#9DABBE",marginBottom:2}}>PIN</div>
@@ -1360,7 +1360,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
     <div>
       {toast&&<div style={{position:"fixed",top:24,right:24,background:"#1A2332",color:"#fff",padding:"12px 20px",borderRadius:10,fontSize:13,fontWeight:500,zIndex:9999,boxShadow:"0 4px 20px rgba(0,0,0,.2)"}}>{toast}</div>}
       <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
-        <button onClick={()=>setView("list")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>â† Kthehu</button>
+        <button onClick={()=>setView("list")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>← Kthehu</button>
         <h1 style={{fontSize:20,fontWeight:700,color:"#1A2332",margin:0}}>Ordinancë e Re</h1>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 340px",gap:20}}>
@@ -1493,7 +1493,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
                 <button onClick={e=>{e.stopPropagation();setSelected({...c});setView("detail");}} style={{flex:1,padding:"8px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",fontSize:12,fontWeight:500,cursor:"pointer",color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>Menaxho</button>
                 <button onClick={e=>{e.stopPropagation();toggleStatus(c.id);}} style={{flex:1,padding:"8px",border:"1px solid",borderRadius:8,fontSize:12,fontWeight:500,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",
                   borderColor:c.status==="active"?"#FECACA":"#BBF7D0",background:c.status==="active"?"#FEF2F2":"#F0FDF4",color:c.status==="active"?"#991B1B":"#15803D"}}>
-                  {c.status==="active"?"Ã‡aktivizo":"Aktivizo"}
+                  {c.status==="active"?"Çaktivizo":"Aktivizo"}
                 </button>
               </div>
             </div>
@@ -1652,7 +1652,7 @@ const ReportsPage = ({ clinics }) => {
       ${generateLogoHtml(clinic)}
       <div class="clinic-name-block">
         <div class="cname">${clinic.name}</div>
-        <div class="csub">${clinic.city}, Kosovë Â· ${clinic.phone||''}</div>
+        <div class="csub">${clinic.city}, Kosovë · ${clinic.phone||''}</div>
         <div class="caddr">${clinic.address||''}</div>
       </div>
     </div>
@@ -1663,7 +1663,7 @@ const ReportsPage = ({ clinics }) => {
         <span class="fizio-name">Fizio<b>app</b></span>
       </div>
       <div class="report-badge">RAPORT ZYRTAR</div>
-      <p>Gjeneruar: 01 Prill 2026 Â· 14:32</p>
+      <p>Gjeneruar: 01 Prill 2026 · 14:32</p>
       <p>Ref: RPT-${clinic.id}-2026-04</p>
     </div>
   </div>
@@ -1672,7 +1672,7 @@ const ReportsPage = ({ clinics }) => {
   <div class="title-block">
     <div>
       <h2>Raport Mujor i Performancës</h2>
-      <p>${clinic.name} â€” ${clinic.city} Â· Aktiv që nga ${clinic.since}</p>
+      <p>${clinic.name} â€” ${clinic.city} · Aktiv që nga ${clinic.since}</p>
     </div>
     <div class="period">Prill 2026</div>
   </div>
@@ -1742,7 +1742,7 @@ const ReportsPage = ({ clinics }) => {
     <div class="staff-grid">
       ${STAFF.map(s=>{
         const initials=s.name.split(" ").slice(1).map(w=>w[0]).join("").slice(0,2);
-        return `<div class="staff-card"><div class="staff-avatar">${initials}</div><div style="flex:1"><div class="staff-name">${s.name}</div><div class="staff-stats">${s.sessions} seanca Â· ${s.patients} pac. Â· ${s.attendance}%</div><div class="prog-bar"><div class="prog-fill" style="width:${s.attendance}%"></div></div></div><div class="staff-rating">${s.rating} â˜…</div></div>`;
+        return `<div class="staff-card"><div class="staff-avatar">${initials}</div><div style="flex:1"><div class="staff-name">${s.name}</div><div class="staff-stats">${s.sessions} seanca · ${s.patients} pac. · ${s.attendance}%</div><div class="prog-bar"><div class="prog-fill" style="width:${s.attendance}%"></div></div></div><div class="staff-rating">${s.rating} â˜…</div></div>`;
       }).join("")}
     </div>
   </div>
@@ -1761,8 +1761,8 @@ const ReportsPage = ({ clinics }) => {
   <!-- FOOTER -->
   <div class="footer">
     <div class="footer-left">
-      <div class="f-main">${clinic.name} Â· ${clinic.city}</div>
-      <div class="f-sub">Raport gjeneruar nga Fizioapp â€” 01 Prill 2026 në 14:32 Â· Ref: RPT-${clinic.id}-2026-04</div>
+      <div class="f-main">${clinic.name} · ${clinic.city}</div>
+      <div class="f-sub">Raport gjeneruar nga Fizioapp â€” 01 Prill 2026 në 14:32 · Ref: RPT-${clinic.id}-2026-04</div>
     </div>
     <div class="footer-right">
       <div class="page-num">Faqe 1 / 1</div>
@@ -1808,7 +1808,7 @@ const ReportsPage = ({ clinics }) => {
               )}
               <div style={{minWidth:0}}>
                 <div style={{fontSize:12,fontWeight:600,color:selectedClinic?.id===c.id?"#2563EB":"#1A2332",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{c.name}</div>
-                <div style={{fontSize:10,color:"#9DABBE"}}>{c.city} Â· {c.status==="active"?"Aktive":"Joaktive"}</div>
+                <div style={{fontSize:10,color:"#9DABBE"}}>{c.city} · {c.status==="active"?"Aktive":"Joaktive"}</div>
               </div>
               {selectedClinic?.id===c.id&&<div style={{marginLeft:"auto",flexShrink:0,width:16,height:16,borderRadius:"50%",background:"#2563EB",display:"flex",alignItems:"center",justifyContent:"center"}}>
                 <svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -1830,7 +1830,7 @@ const ReportsPage = ({ clinics }) => {
             )}
             <div style={{flex:1}}>
               <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>{selectedClinic.name}</div>
-              <div style={{fontSize:11,color:"#5A6A7E"}}>{selectedClinic.city} Â· {selectedClinic.phone||"â€”"} Â· {selectedClinic.address||"â€”"}</div>
+              <div style={{fontSize:11,color:"#5A6A7E"}}>{selectedClinic.city} · {selectedClinic.phone||"â€”"} · {selectedClinic.address||"â€”"}</div>
               <div style={{fontSize:10,color:"#9DABBE",marginTop:1}}>
                 {selectedClinic.logo ? "âœ“ Logo e ngarkuar â€” do shfaqet në raport" : "âš  Pa logo â€” do përdoret shkronjat fillestare"}
               </div>
@@ -2020,7 +2020,7 @@ export default function FizioApp() {
     if(view==="new") return (
       <div>
         <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
-          <button onClick={()=>setView("list")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>â† Kthehu</button>
+          <button onClick={()=>setView("list")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>← Kthehu</button>
           <h1 style={{fontSize:20,fontWeight:700,color:"#1A2332",margin:0}}>Plan i Ri Trajtimi</h1>
         </div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 340px",gap:20}}>
@@ -2030,7 +2030,7 @@ export default function FizioApp() {
               {[
                 {l:"Pacienti *",k:"patient",ph:"Emri i pacientit"},
                 {l:"Fizioterapis *",k:"therapist",ph:"Dr. Emri Mbiemri"},
-                {l:"Ã‡mimi për seancë (€)",k:"price",ph:"65",t:"number"},
+                {l:"Çmimi për seancë (€)",k:"price",ph:"65",t:"number"},
                 {l:"Numri i seancave",k:"sessions",ph:"10",t:"number"},
                 {l:"Data e fillimit",k:"startDate",ph:"",t:"date"},
               ].map(f=>(
@@ -2081,7 +2081,7 @@ export default function FizioApp() {
         <div>
           {toast&&<div style={{position:"fixed",top:24,right:24,background:"#1A2332",color:"#fff",padding:"12px 20px",borderRadius:10,fontSize:13,fontWeight:500,zIndex:9999,boxShadow:"0 4px 20px rgba(0,0,0,.2)"}}>{toast}</div>}
           <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
-            <button onClick={()=>{setView("list");setSelected(null);}} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>â† Kthehu</button>
+            <button onClick={()=>{setView("list");setSelected(null);}} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>← Kthehu</button>
             <h1 style={{fontSize:20,fontWeight:700,color:"#1A2332",margin:0,flex:1}}>Plani i Trajtimit</h1>
             <button onClick={()=>addSession(p.id)} disabled={p.done>=p.sessions}
               style={{padding:"9px 18px",background:p.done>=p.sessions?"#E8ECF2":"linear-gradient(135deg,#22C55E,#16A34A)",color:p.done>=p.sessions?"#9DABBE":"#fff",border:"none",borderRadius:9,fontSize:13,fontWeight:600,cursor:p.done>=p.sessions?"not-allowed":"pointer",fontFamily:"'DM Sans',sans-serif"}}>
@@ -2099,7 +2099,7 @@ export default function FizioApp() {
                 <button onClick={()=>setShowSOAP(false)} style={{border:"none",background:"none",cursor:"pointer",fontSize:18,color:"#9DABBE"}}>Ã—</button>
               </div>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14}}>
-                {[{k:"s",l:"S â€” Subjektive",ph:"Ã‡farë raporton pacienti? Dhimbje, simptoma..."},
+                {[{k:"s",l:"S â€” Subjektive",ph:"Çfarë raporton pacienti? Dhimbje, simptoma..."},
                   {k:"o",l:"O â€” Objektive",ph:"Gjetjet fizike, matjet, vëzhgimet..."},
                   {k:"a",l:"A â€” Vlerësimi",ph:"Diagnoza, progresi, interpretimi..."},
                   {k:"p",l:"P â€” Plani",ph:"Trajtimi i radhës, ushtrimet, rekomandimet..."}].map(f=>(
@@ -2173,7 +2173,7 @@ export default function FizioApp() {
                     <div style={{width:32,height:32,borderRadius:8,background:"#EBF4FF",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:700,color:"#2563EB",flexShrink:0}}>S{i+1}</div>
                     <div style={{flex:1}}>
                       <div style={{fontSize:13,fontWeight:500,color:"#1A2332"}}>Seanca {i+1} â€” {p.type}</div>
-                      <div style={{fontSize:11,color:"#9DABBE"}}>{dateStr} Â· {p.therapist}</div>
+                      <div style={{fontSize:11,color:"#9DABBE"}}>{dateStr} · {p.therapist}</div>
                     </div>
                     <div style={{display:"flex",alignItems:"center",gap:4,background:"#F0FDF4",padding:"4px 10px",borderRadius:20}}>
                       <div style={{width:6,height:6,borderRadius:"50%",background:"#22C55E"}}/>
@@ -2308,7 +2308,7 @@ export default function FizioApp() {
       </div>
     );
 
-    const tabs=[{k:"profile",l:"Profili Im"},{k:"clinic",l:"Ordinanca"},{k:"notifications",l:"Njoftimet"},{k:"prices",l:"Ã‡mimet"},{k:"security",l:"Siguria"},{k:"appearance",l:"Pamja"}];
+    const tabs=[{k:"profile",l:"Profili Im"},{k:"clinic",l:"Ordinanca"},{k:"notifications",l:"Njoftimet"},{k:"prices",l:"Çmimet"},{k:"security",l:"Siguria"},{k:"appearance",l:"Pamja"}];
 
     return (
       <div>
@@ -2346,7 +2346,7 @@ export default function FizioApp() {
                   </div>
                   <div>
                     <div style={{fontSize:16,fontWeight:700,color:"#1A2332"}}>{profile.name}</div>
-                    <div style={{fontSize:12,color:"#5A6A7E",marginTop:2}}>{profile.role} Â· {profile.clinic}</div>
+                    <div style={{fontSize:12,color:"#5A6A7E",marginTop:2}}>{profile.role} · {profile.clinic}</div>
                     <div style={{fontSize:11,color:"#9DABBE",marginTop:1}}>{profile.email}</div>
                   </div>
                   <button style={{marginLeft:"auto",padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",fontSize:12,fontWeight:500,cursor:"pointer",color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>
@@ -2445,11 +2445,11 @@ export default function FizioApp() {
             {/* PRICES */}
             {activeTab==="prices"&&(
               <div>
-                <div style={{fontSize:16,fontWeight:700,color:"#1A2332",marginBottom:6}}>Lista e Ã‡mimeve</div>
+                <div style={{fontSize:16,fontWeight:700,color:"#1A2332",marginBottom:6}}>Lista e Çmimeve</div>
                 <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Cakto çmimet dhe kohëzgjatjen për çdo shërbim</div>
                 <div style={{background:"#F8FAFF",borderRadius:12,overflow:"hidden",border:"1px solid #E8ECF2",marginBottom:20}}>
                   <div style={{display:"grid",gridTemplateColumns:"2fr 100px 90px 80px",padding:"10px 16px",borderBottom:"1px solid #E8ECF2",fontSize:11,fontWeight:700,color:"#9DABBE",textTransform:"uppercase",letterSpacing:".06em"}}>
-                    <span>Shërbimi</span><span>Ã‡mimi (€)</span><span>Kohëzgjatja</span><span>Aktiv</span>
+                    <span>Shërbimi</span><span>Çmimi (€)</span><span>Kohëzgjatja</span><span>Aktiv</span>
                   </div>
                   {prices.map(p=>(
                     <div key={p.id} style={{display:"grid",gridTemplateColumns:"2fr 100px 90px 80px",padding:"12px 16px",borderBottom:"1px solid #F1F3F7",alignItems:"center",background:p.active?"transparent":"#FAFAFA"}}
@@ -2473,7 +2473,7 @@ export default function FizioApp() {
                   ))}
                 </div>
                 <div style={{display:"flex",gap:10}}>
-                  {saveBtn("Ruaj Ã‡mimet")}
+                  {saveBtn("Ruaj Çmimet")}
                   <button onClick={()=>setPrices(prev=>[...prev,{id:Date.now(),service:"Shërbim i Ri",price:60,duration:45,active:true}])}
                     style={{padding:"10px 18px",border:"1px solid #E8ECF2",borderRadius:9,background:"#fff",fontSize:13,fontWeight:500,cursor:"pointer",color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>
                     + Shto Shërbim
@@ -2505,7 +2505,7 @@ export default function FizioApp() {
                 <div style={{marginTop:32,paddingTop:24,borderTop:"1px solid #E8ECF2"}}>
                   <div style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:6}}>Sesionet Aktive</div>
                   <div style={{fontSize:13,color:"#5A6A7E",marginBottom:16}}>Pajisjet ku jeni të kyçur aktualisht</div>
-                  {[{d:"Windows 11 Â· Chrome",l:"Gjilan, Kosovë",t:"Aktiv tani",c:"#22C55E"},{d:"iPhone 14 Â· Safari",l:"Prishtinë, Kosovë",t:"3 orë më parë",c:"#F59E0B"}].map((s,i)=>(
+                  {[{d:"Windows 11 · Chrome",l:"Gjilan, Kosovë",t:"Aktiv tani",c:"#22C55E"},{d:"iPhone 14 · Safari",l:"Prishtinë, Kosovë",t:"3 orë më parë",c:"#F59E0B"}].map((s,i)=>(
                     <div key={i} style={{display:"flex",alignItems:"center",gap:12,padding:"12px 16px",background:"#F8FAFF",borderRadius:10,border:"1px solid #E8ECF2",marginBottom:8}}>
                       <div style={{width:36,height:36,borderRadius:9,background:"#EBF4FF",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18,flexShrink:0}}>
                         {i===0?"ðŸ’»":"ðŸ“±"}
