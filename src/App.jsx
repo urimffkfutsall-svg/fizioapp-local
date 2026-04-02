@@ -2,14 +2,14 @@
 
 // â”€â”€â”€ DATA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const PATIENTS = [
-  { id:1, name:"Arjeta Krasniqi", age:34, condition:"Dhimbje shpine", sessions:4, total:10, next:"02 Apr", status:"active", phone:"044 123 456", lastVisit:"01 Apr", balance:130, therapist:"Dr. Arta Morina", dob:"12.03.1992", address:"PrishtinÃ«" },
-  { id:2, name:"Besnik Morina", age:48, condition:"Gjuri i djathtÃ«", sessions:7, total:12, next:"01 Apr", status:"active", phone:"045 234 567", lastVisit:"29 Mar", balance:65, therapist:"Dr. Blendi Berisha", dob:"05.07.1978", address:"FushÃ« KosovÃ«" },
-  { id:3, name:"Mimoza Berisha", age:29, condition:"Tension i qafÃ«s", sessions:2, total:8, next:"01 Apr", status:"active", phone:"049 345 678", lastVisit:"28 Mar", balance:195, therapist:"Dr. Arta Morina", dob:"22.11.1996", address:"PrishtinÃ«" },
-  { id:4, name:"Driton Hoxha", age:55, condition:"Artriti i shpatullÃ«s", sessions:9, total:15, next:"03 Apr", status:"active", phone:"044 456 789", lastVisit:"01 Apr", balance:0, therapist:"Dr. Fjolla Gashi", dob:"14.02.1971", address:"Lipjan" },
+  { id:1, name:"Arjeta Krasniqi", age:34, condition:"Dhimbje shpine", sessions:4, total:10, next:"02 Apr", status:"active", phone:"044 123 456", lastVisit:"01 Apr", balance:130, therapist:"Dr. Arta Morina", dob:"12.03.1992", address:"Prishtinë" },
+  { id:2, name:"Besnik Morina", age:48, condition:"Gjuri i djathtë", sessions:7, total:12, next:"01 Apr", status:"active", phone:"045 234 567", lastVisit:"29 Mar", balance:65, therapist:"Dr. Blendi Berisha", dob:"05.07.1978", address:"Fushë Kosovë" },
+  { id:3, name:"Mimoza Berisha", age:29, condition:"Tension i qafës", sessions:2, total:8, next:"01 Apr", status:"active", phone:"049 345 678", lastVisit:"28 Mar", balance:195, therapist:"Dr. Arta Morina", dob:"22.11.1996", address:"Prishtinë" },
+  { id:4, name:"Driton Hoxha", age:55, condition:"Artriti i shpatullës", sessions:9, total:15, next:"03 Apr", status:"active", phone:"044 456 789", lastVisit:"01 Apr", balance:0, therapist:"Dr. Fjolla Gashi", dob:"14.02.1971", address:"Lipjan" },
   { id:5, name:"Liridon Gashi", age:41, condition:"Hernia diskale", sessions:1, total:10, next:"04 Apr", status:"new", phone:"045 567 890", lastVisit:"01 Apr", balance:260, therapist:"Dr. Blendi Berisha", dob:"30.06.1984", address:"Gjilan" },
-  { id:6, name:"Valdete Osmani", age:62, condition:"Osteoporoza", sessions:12, total:20, next:"05 Apr", status:"active", phone:"044 678 901", lastVisit:"27 Mar", balance:0, therapist:"Dr. Fjolla Gashi", dob:"08.09.1963", address:"PrishtinÃ«" },
-  { id:7, name:"Kujtim Rama", age:37, condition:"Distorsion kÃ«mbe", sessions:3, total:6, next:"02 Apr", status:"active", phone:"049 789 012", lastVisit:"30 Mar", balance:90, therapist:"Dr. Arta Morina", dob:"17.04.1988", address:"MitrovicÃ«" },
-  { id:8, name:"Shpresa Aliu", age:52, condition:"Fibromialgjia", sessions:8, total:16, next:"06 Apr", status:"inactive", phone:"044 890 123", lastVisit:"15 Mar", balance:0, therapist:"Dr. Kushtrim Leka", dob:"03.01.1974", address:"PejÃ«" },
+  { id:6, name:"Valdete Osmani", age:62, condition:"Osteoporoza", sessions:12, total:20, next:"05 Apr", status:"active", phone:"044 678 901", lastVisit:"27 Mar", balance:0, therapist:"Dr. Fjolla Gashi", dob:"08.09.1963", address:"Prishtinë" },
+  { id:7, name:"Kujtim Rama", age:37, condition:"Distorsion këmbe", sessions:3, total:6, next:"02 Apr", status:"active", phone:"049 789 012", lastVisit:"30 Mar", balance:90, therapist:"Dr. Arta Morina", dob:"17.04.1988", address:"Mitrovicë" },
+  { id:8, name:"Shpresa Aliu", age:52, condition:"Fibromialgjia", sessions:8, total:16, next:"06 Apr", status:"inactive", phone:"044 890 123", lastVisit:"15 Mar", balance:0, therapist:"Dr. Kushtrim Leka", dob:"03.01.1974", address:"Pejë" },
 ];
 const APPOINTMENTS = [
   { id:1, patient:"Arjeta Krasniqi", time:"09:00", duration:45, type:"Fizioterapi", therapist:"Dr. Morina", status:"confirmed", date:"2026-04-01" },
@@ -35,16 +35,16 @@ const STAFF = [
   { name:"Dr. Kushtrim Leka", sessions:98, patients:23, attendance:89, rating:4.6 },
 ];
 const INITIAL_CLINICS = [
-  {id:1,name:"Ordinanca Krasniqi",city:"PrishtinÃ«",users:4,patients:67,status:"active",revenue:4200,since:"Jan 2024",logo:null,phone:"044 100 200",email:"info@krasniqi.com",address:"Rr. Agim Ramadani 12, PrishtinÃ«",
+  {id:1,name:"Ordinanca Krasniqi",city:"Prishtinë",users:4,patients:67,status:"active",revenue:4200,since:"Jan 2024",logo:null,phone:"044 100 200",email:"info@krasniqi.com",address:"Rr. Agim Ramadani 12, Prishtinë",
    admins:[{id:101,name:"Agron Krasniqi",pin:"1234",username:"agron",role:"admin"}],
    treatmentTypes:["Fizioterapi","Rehabilitim","Masazh terapeutik","Elektroterapi","Ultrasonik"]},
-  {id:2,name:"Fizio Center Peja",city:"PejÃ«",users:3,patients:45,status:"active",revenue:3100,since:"Mar 2024",logo:null,phone:"039 200 300",email:"peja@fiziocenter.com",address:"Rr. MbretÃ«resha TeutÃ« 5, PejÃ«",
+  {id:2,name:"Fizio Center Peja",city:"Pejë",users:3,patients:45,status:"active",revenue:3100,since:"Mar 2024",logo:null,phone:"039 200 300",email:"peja@fiziocenter.com",address:"Rr. Mbretëresha Teutë 5, Pejë",
    admins:[{id:102,name:"Blerta Peja",pin:"5678",username:"blerta",role:"admin"}],
    treatmentTypes:["Fizioterapi","Kineziterapi","Lazer terapi"]},
-  {id:3,name:"RehabPro Gjilan",city:"Gjilan",users:5,patients:89,status:"active",revenue:5800,since:"Nov 2023",logo:null,phone:"0280 300 400",email:"gjilan@rehabpro.com",address:"Rr. DÃ«shmorÃ«t e Kombit 8, Gjilan",
+  {id:3,name:"RehabPro Gjilan",city:"Gjilan",users:5,patients:89,status:"active",revenue:5800,since:"Nov 2023",logo:null,phone:"0280 300 400",email:"gjilan@rehabpro.com",address:"Rr. Dëshmorët e Kombit 8, Gjilan",
    admins:[{id:103,name:"Driton Gjilani",pin:"9999",username:"driton",role:"admin"}],
-   treatmentTypes:["Fizioterapi","Rehabilitim","Hidroterapi","AkupunkturÃ«"]},
-  {id:4,name:"Vita Fizio",city:"MitrovicÃ«",users:2,patients:23,status:"inactive",revenue:1200,since:"Jun 2024",logo:null,phone:"028 400 500",email:"vita@fizio.com",address:"Rr. SkÃ«nderbeu 22, MitrovicÃ«",
+   treatmentTypes:["Fizioterapi","Rehabilitim","Hidroterapi","Akupunkturë"]},
+  {id:4,name:"Vita Fizio",city:"Mitrovicë",users:2,patients:23,status:"inactive",revenue:1200,since:"Jun 2024",logo:null,phone:"028 400 500",email:"vita@fizio.com",address:"Rr. Skënderbeu 22, Mitrovicë",
    admins:[],treatmentTypes:["Fizioterapi"]},
   {id:5,name:"Sport Rehab",city:"Prizren",users:3,patients:41,status:"active",revenue:2900,since:"Feb 2024",logo:null,phone:"029 500 600",email:"sport@rehab.com",address:"Rr. Remzi Ademaj 3, Prizren",
    admins:[{id:104,name:"Liridon Prizreni",pin:"1111",username:"liridon",role:"admin"}],
@@ -102,8 +102,8 @@ const Badge = ({ status }) => {
     new:{bg:"#EBF4FF",color:"#2563EB",label:"I Ri"},
     inactive:{bg:"#F5F5F5",color:"#6B7280",label:"Joaktiv"},
     confirmed:{bg:"#F0FDF4",color:"#15803D",label:"Konfirmuar"},
-    "in-progress":{bg:"#FFFBEB",color:"#92400E",label:"NÃ« progres"},
-    waiting:{bg:"#EBF4FF",color:"#2563EB",label:"NÃ« pritje"},
+    "in-progress":{bg:"#FFFBEB",color:"#92400E",label:"Në progres"},
+    waiting:{bg:"#EBF4FF",color:"#2563EB",label:"Në pritje"},
     pending:{bg:"#FEF3C7",color:"#92400E",label:"Pezull"},
     paid:{bg:"#F0FDF4",color:"#15803D",label:"Paguar"},
     overdue:{bg:"#FEF2F2",color:"#991B1B",label:"Vonuar"},
@@ -157,7 +157,7 @@ const PinLoginPage = ({ clinics, onLogin, onSwitchToNormal }) => {
     const next=pin+k;
     setPin(next);
     if(!tryPin(next)&&next.length>=6){
-      setShake(true);setHint("PIN i gabuar. Provo pÃ«rsÃ«ri.");
+      setShake(true);setHint("PIN i gabuar. Provo përsëri.");
       setTimeout(()=>{setShake(false);setPin("");setHint("");},900);
     }
   };
@@ -190,7 +190,7 @@ const PinLoginPage = ({ clinics, onLogin, onSwitchToNormal }) => {
             </svg>
           </div>
           <div style={{fontSize:24,fontWeight:700,color:"#1A2332",letterSpacing:"-0.5px"}}>Fizio<span style={{color:"#2563EB"}}>app</span></div>
-          <div style={{fontSize:12,color:"#9DABBE",marginTop:3}}>KyÃ§je e ShpejtÃ« me PIN</div>
+          <div style={{fontSize:12,color:"#9DABBE",marginTop:3}}>Kyçje e Shpejtë me PIN</div>
         </div>
 
         {/* PIN display */}
@@ -227,9 +227,9 @@ const PinLoginPage = ({ clinics, onLogin, onSwitchToNormal }) => {
         </div>
 
         <button onClick={onSwitchToNormal} style={{width:"100%",padding:"12px",background:"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:12,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",marginBottom:12,letterSpacing:".02em"}}>
-          â†µ KyÃ§u si Administrator
+          â†µ Kyçu si Administrator
         </button>
-        <div style={{fontSize:10,color:"#9DABBE",textAlign:"center"}}>Tastiera (0â€“9) â€¢ Backspace â€¢ Escape pÃ«r pastrim</div>
+        <div style={{fontSize:10,color:"#9DABBE",textAlign:"center"}}>Tastiera (0â€“9) â€¢ Backspace â€¢ Escape për pastrim</div>
       </div>
     </div>
   );
@@ -243,7 +243,7 @@ const LoginPage = ({ onLogin }) => {
     if((u==="urumi1806"||u==="urimi1806")&&p==="1806"){setLoading(true);setTimeout(()=>onLogin({username:u,role:"superadmin"}),800);}
     else if(u==="admin"&&p==="admin"){setLoading(true);setTimeout(()=>onLogin({username:u,role:"admin",clinicId:3,clinicName:"RehabPro Gjilan"}),800);}
     else if(u==="fizio"&&p==="fizio"){setLoading(true);setTimeout(()=>onLogin({username:u,role:"fizioterapis",clinicId:3,clinicName:"RehabPro Gjilan"}),800);}
-    else setErr("Kredencialet janÃ« gabim. Ju lutemi provoni pÃ«rsÃ«ri.");
+    else setErr("Kredencialet janë gabim. Ju lutemi provoni përsëri.");
   };
   return (
     <div style={{minHeight:"100vh",background:"linear-gradient(135deg,#F0F7FF 0%,#FAFAFA 50%,#EBF4FF 100%)",display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"'DM Sans',sans-serif",position:"relative",overflow:"hidden"}}>
@@ -266,15 +266,15 @@ const LoginPage = ({ onLogin }) => {
             </div>
           </div>
           <h1 style={{fontSize:28,fontWeight:700,color:"#1A2332",margin:0,letterSpacing:"-0.5px"}}>Fizio<span style={{color:"#2563EB"}}>app</span></h1>
-          <p style={{color:"#5A6A7E",fontSize:14,marginTop:6}}>Menaxhimi i ordinancave tÃ« fizioterapisÃ«</p>
+          <p style={{color:"#5A6A7E",fontSize:14,marginTop:6}}>Menaxhimi i ordinancave të fizioterapisë</p>
         </div>
         <div style={{background:"#fff",borderRadius:20,padding:32,border:"1px solid #E8ECF2",boxShadow:"0 4px 24px rgba(37,99,235,0.08)"}}>
-          <h2 style={{fontSize:18,fontWeight:600,color:"#1A2332",marginBottom:6}}>Hyr nÃ« llogari</h2>
+          <h2 style={{fontSize:18,fontWeight:600,color:"#1A2332",marginBottom:6}}>Hyr në llogari</h2>
           <p style={{fontSize:13,color:"#9DABBE",marginBottom:24}}>Fut kredencialet e tua</p>
           {err&&<div style={{background:"#FEF2F2",border:"1px solid #FECACA",borderRadius:10,padding:"10px 14px",marginBottom:16,fontSize:12,color:"#991B1B"}}>{err}</div>}
           <div style={{marginBottom:16}}>
             <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>EMRI I PÃ‹RDORUESIT</label>
-            <input value={u} onChange={e=>setU(e.target.value)} onKeyDown={e=>e.key==="Enter"&&handleLogin()} placeholder="Emri i pÃ«rdoruesit"
+            <input value={u} onChange={e=>setU(e.target.value)} onKeyDown={e=>e.key==="Enter"&&handleLogin()} placeholder="Emri i përdoruesit"
               style={{width:"100%",padding:"11px 14px",border:"1.5px solid #E8ECF2",borderRadius:10,fontSize:14,outline:"none",fontFamily:"'DM Sans',sans-serif",color:"#1A2332",boxSizing:"border-box"}}
               onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
           </div>
@@ -303,14 +303,14 @@ const GlobalSearch = ({ onNavigate }) => {
       <div style={{display:"flex",alignItems:"center",gap:8,background:"#F8FAFF",border:"1px solid #E8ECF2",borderRadius:9,padding:"7px 12px"}}>
         <Icon name="search" size={14} color="#9DABBE"/>
         <input value={q} onChange={e=>{setQ(e.target.value);setOpen(true);}} onFocus={()=>setOpen(true)} onBlur={()=>setTimeout(()=>setOpen(false),150)}
-          placeholder="KÃ«rko pacient, termin..."
+          placeholder="Kërko pacient, termin..."
           style={{border:"none",outline:"none",fontSize:13,color:"#1A2332",fontFamily:"'DM Sans',sans-serif",flex:1,background:"none"}}/>
         {q&&<div onClick={()=>{setQ("");setOpen(false);}} style={{cursor:"pointer",opacity:.5}}><Icon name="x" size={13} color="#5A6A7E"/></div>}
       </div>
       {open&&results.length>0&&(
         <div style={{position:"absolute",top:"calc(100% + 6px)",left:0,right:0,background:"#fff",border:"1px solid #E8ECF2",borderRadius:12,boxShadow:"0 8px 32px rgba(37,99,235,0.12)",zIndex:1000,overflow:"hidden",maxHeight:320,overflowY:"auto"}}>
           <div style={{padding:"8px 12px 6px",fontSize:10,fontWeight:700,color:"#9DABBE",letterSpacing:".08em",textTransform:"uppercase",borderBottom:"1px solid #F1F3F7"}}>
-            {results.length} pacientÃ« gjetur
+            {results.length} pacientë gjetur
           </div>
           {results.map(p=>{
             const pct=Math.round(p.sessions/p.total*100);
@@ -322,7 +322,7 @@ const GlobalSearch = ({ onNavigate }) => {
                 <Avatar name={p.name} size={34} bg="#EBF4FF" color="#2563EB"/>
                 <div style={{flex:1,minWidth:0}}>
                   <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>{p.name}</div>
-                  <div style={{fontSize:11,color:"#5A6A7E"}}>{p.condition} Â· {p.age} vjeÃ§</div>
+                  <div style={{fontSize:11,color:"#5A6A7E"}}>{p.condition} Â· {p.age} vjeç</div>
                   <div style={{background:"#F1F3F7",borderRadius:20,height:3,width:80,marginTop:4,overflow:"hidden"}}>
                     <div style={{height:"100%",borderRadius:20,background:"#2563EB",width:`${pct}%`}}/>
                   </div>
@@ -338,15 +338,15 @@ const GlobalSearch = ({ onNavigate }) => {
             style={{padding:"10px 14px",fontSize:12,color:"#2563EB",fontWeight:600,cursor:"pointer",textAlign:"center",background:"#F8FAFF"}}
             onMouseEnter={e=>e.currentTarget.style.background="#EBF4FF"}
             onMouseLeave={e=>e.currentTarget.style.background="#F8FAFF"}>
-            Shiko tÃ« gjithÃ« pacientÃ«t â†’
+            Shiko të gjithë pacientët â†’
           </div>
         </div>
       )}
       {open&&q.trim().length>1&&results.length===0&&(
         <div style={{position:"absolute",top:"calc(100% + 6px)",left:0,right:0,background:"#fff",border:"1px solid #E8ECF2",borderRadius:12,boxShadow:"0 8px 32px rgba(0,0,0,.08)",zIndex:1000,padding:"20px",textAlign:"center"}}>
           <div style={{fontSize:24,marginBottom:8}}>ðŸ”</div>
-          <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>Nuk u gjet asnjÃ« rezultat</div>
-          <div style={{fontSize:12,color:"#9DABBE",marginTop:4}}>Provo me emÃ«r tjetÃ«r</div>
+          <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>Nuk u gjet asnjë rezultat</div>
+          <div style={{fontSize:12,color:"#9DABBE",marginTop:4}}>Provo me emër tjetër</div>
         </div>
       )}
     </div>
@@ -361,9 +361,9 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
   const totalUsers=clinics.reduce((s,c)=>s+c.users,0);
   const recentActivity=[
     {text:"Ordinanca e re u shtua: Sport Rehab",time:"2h",icon:"clinics",color:"#2563EB",bg:"#EBF4FF"},
-    {text:"Admin Agron Krasniqi u kyÃ§ me PIN",time:"3h",icon:"staff",color:"#22C55E",bg:"#F0FDF4"},
-    {text:"Vita Fizio: abonimi u Ã§aktivizua",time:"5h",icon:"x",color:"#EF4444",bg:"#FEF2F2"},
-    {text:"Ordinanca Krasniqi: 67 pacientÃ« aktivÃ«",time:"1d",icon:"patients",color:"#F59E0B",bg:"#FFFBEB"},
+    {text:"Admin Agron Krasniqi u kyç me PIN",time:"3h",icon:"staff",color:"#22C55E",bg:"#F0FDF4"},
+    {text:"Vita Fizio: abonimi u çaktivizua",time:"5h",icon:"x",color:"#EF4444",bg:"#FEF2F2"},
+    {text:"Ordinanca Krasniqi: 67 pacientë aktivë",time:"1d",icon:"patients",color:"#F59E0B",bg:"#FFFBEB"},
   ];
   const [editOpen,setEditOpen]=useState(false);
   const [draft,setDraft]=useState(null);
@@ -394,13 +394,13 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
     <div>
       <div style={{marginBottom:24}}>
         <h1 style={{fontSize:22,fontWeight:700,color:"#1A2332",margin:0}}>Dashboard Superadmin</h1>
-        <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>Pamje e plotÃ« e tÃ« gjitha ordinancave</p>
+        <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>Pamje e plotë e të gjitha ordinancave</p>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14,marginBottom:20}}>
         {[{icon:"clinics",label:"Ordinanca Aktive",value:active.length,change:`${clinics.length} gjithsej`,up:true,a:"blue"},
-          {icon:"patients",label:"PacientÃ« Total",value:totalPatients,change:"+23 muajin",up:true,a:"green"},
-          {icon:"staff",label:"PÃ«rdorues Total",value:totalUsers,change:`${clinics.length} ordinanca`,up:true,a:"amber"},
-          {icon:"payments",label:"TÃ« Ardhura Total",value:`â‚¬${totalRevenue.toLocaleString()}`,change:"+12.4%",up:true,a:"green"}].map(x=>(
+          {icon:"patients",label:"Pacientë Total",value:totalPatients,change:"+23 muajin",up:true,a:"green"},
+          {icon:"staff",label:"Përdorues Total",value:totalUsers,change:`${clinics.length} ordinanca`,up:true,a:"amber"},
+          {icon:"payments",label:"Të Ardhura Total",value:`â‚¬${totalRevenue.toLocaleString()}`,change:"+12.4%",up:true,a:"green"}].map(x=>(
           <div key={x.label} style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:"18px 20px"}}>
             <div style={{width:36,height:36,borderRadius:10,background:x.a==="blue"?"#EBF4FF":x.a==="green"?"#F0FDF4":"#FFFBEB",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:12}}>
               <Icon name={x.icon} size={18} color={x.a==="blue"?"#2563EB":x.a==="green"?"#22C55E":"#F59E0B"}/>
@@ -413,7 +413,7 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 360px",gap:16}}>
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
-          <div style={{padding:"14px 18px",borderBottom:"1px solid #E8ECF2",fontSize:13,fontWeight:600,color:"#1A2332"}}>TÃ« gjitha Ordinancat</div>
+          <div style={{padding:"14px 18px",borderBottom:"1px solid #E8ECF2",fontSize:13,fontWeight:600,color:"#1A2332"}}>Të gjitha Ordinancat</div>
           {clinics.map(c=>(
             <div key={c.id} style={{display:"flex",alignItems:"center",gap:12,padding:"13px 18px",borderBottom:"1px solid #F5F7FA"}}
               onMouseEnter={e=>e.currentTarget.style.background="#FAFBFD"}
@@ -424,7 +424,7 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
               }
               <div style={{flex:1}}>
                 <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>{c.name}</div>
-                <div style={{fontSize:11,color:"#9DABBE"}}>{c.city} Â· {c.patients} pacientÃ« Â· {c.users} pÃ«rdorues</div>
+                <div style={{fontSize:11,color:"#9DABBE"}}>{c.city} Â· {c.patients} pacientë Â· {c.users} përdorues</div>
               </div>
               <div style={{textAlign:"right"}}>
                 <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>â‚¬{c.revenue.toLocaleString()}</div>
@@ -440,7 +440,7 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
         </div>
         <div style={{display:"flex",flexDirection:"column",gap:14}}>
           <div style={{background:"linear-gradient(135deg,#1D4ED8,#3B82F6)",borderRadius:14,padding:"18px 18px"}}>
-            <div style={{fontSize:12,color:"rgba(255,255,255,.75)",marginBottom:4}}>ShpÃ«rndarje ordinancash</div>
+            <div style={{fontSize:12,color:"rgba(255,255,255,.75)",marginBottom:4}}>Shpërndarje ordinancash</div>
             {clinics.filter(c=>c.status==="active").map(c=>{
               const pct=Math.round(c.revenue/totalRevenue*100);
               return (
@@ -465,7 +465,7 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
                 </div>
                 <div style={{flex:1}}>
                   <div style={{fontSize:12,color:"#1A2332"}}>{a.text}</div>
-                  <div style={{fontSize:10,color:"#9DABBE",marginTop:2}}>{a.time} mÃ« parÃ«</div>
+                  <div style={{fontSize:10,color:"#9DABBE",marginTop:2}}>{a.time} më parë</div>
                 </div>
               </div>
             ))}
@@ -480,33 +480,33 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
 const Dashboard = ({ user }) => {
   const today=APPOINTMENTS.filter(a=>a.date==="2026-04-01");
   const barData=[35,48,55,42,50,20,8];
-  const barLabels=["HÃ«","Ma","MÃ«","En","Pr","Sh","Di"];
+  const barLabels=["Hë","Ma","Më","En","Pr","Sh","Di"];
   const maxBar=Math.max(...barData);
   return (
     <div>
       <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",marginBottom:24,flexWrap:"wrap",gap:12}}>
         <div>
-          <h1 style={{fontSize:22,fontWeight:700,color:"#1A2332",margin:0}}>MirÃ«mbrÃ«ma, {user.role==="superadmin"?"Urimi":user.role==="admin"?"Admin":"Fizioterapis"} ðŸ‘‹</h1>
-          <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>E MÃ«rkurÃ«, 1 Prill 2026 Â· Sot keni <strong>{today.length} termine</strong></p>
+          <h1 style={{fontSize:22,fontWeight:700,color:"#1A2332",margin:0}}>Mirëmbrëma, {user.role==="superadmin"?"Urimi":user.role==="admin"?"Admin":"Fizioterapis"} ðŸ‘‹</h1>
+          <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>E Mërkurë, 1 Prill 2026 Â· Sot keni <strong>{today.length} termine</strong></p>
         </div>
         <div style={{display:"flex",gap:8,background:"#F1F3F7",padding:3,borderRadius:10}}>
-          {["Sot","Kjo JavÃ«","Ky Muaj"].map((t,i)=>(
+          {["Sot","Kjo Javë","Ky Muaj"].map((t,i)=>(
             <div key={t} style={{padding:"6px 14px",borderRadius:8,fontSize:12,fontWeight:500,cursor:"pointer",background:i===0?"#fff":"transparent",color:i===0?"#1A2332":"#5A6A7E",boxShadow:i===0?"0 1px 4px rgba(0,0,0,.08)":"none"}}>{t}</div>
           ))}
         </div>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14,marginBottom:20}}>
-        <StatCard icon="patients" label="PacientÃ« AktivÃ«" value="124" change="+12 kÃ«tÃ« muaj" changeUp accent="blue"/>
+        <StatCard icon="patients" label="Pacientë Aktivë" value="124" change="+12 këtë muaj" changeUp accent="blue"/>
         <StatCard icon="calendar" label="Termine Sot" value={today.length} change="3 mbeten" changeUp accent="green"/>
-        <StatCard icon="payments" label="TÃ« Ardhura Mujore" value="â‚¬3,240" change="+8.3%" changeUp accent="amber"/>
-        <StatCard icon="activity" label="Pa Konfirmim" value="3" change="KÃ«rkon vÃ«mendje" changeUp={false} accent="red"/>
+        <StatCard icon="payments" label="Të Ardhura Mujore" value="â‚¬3,240" change="+8.3%" changeUp accent="amber"/>
+        <StatCard icon="activity" label="Pa Konfirmim" value="3" change="Kërkon vëmendje" changeUp={false} accent="red"/>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 320px",gap:16,marginBottom:16}}>
         <div style={{display:"flex",flexDirection:"column",gap:14}}>
           <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
             <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"14px 18px",borderBottom:"1px solid #E8ECF2"}}>
               <span style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>Terminet e Sotme</span>
-              <span style={{fontSize:12,color:"#2563EB",cursor:"pointer",fontWeight:500}}>Shiko tÃ« gjitha â†’</span>
+              <span style={{fontSize:12,color:"#2563EB",cursor:"pointer",fontWeight:500}}>Shiko të gjitha â†’</span>
             </div>
             {today.map(a=>(
               <div key={a.id} style={{display:"flex",alignItems:"center",gap:12,padding:"12px 18px",borderBottom:"1px solid #F5F7FA"}}>
@@ -525,8 +525,8 @@ const Dashboard = ({ user }) => {
           </div>
           <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
             <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"14px 18px",borderBottom:"1px solid #E8ECF2"}}>
-              <span style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>PacientÃ«t e Fundit</span>
-              <span style={{fontSize:12,color:"#2563EB",cursor:"pointer",fontWeight:500}}>Shiko tÃ« gjitha â†’</span>
+              <span style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>Pacientët e Fundit</span>
+              <span style={{fontSize:12,color:"#2563EB",cursor:"pointer",fontWeight:500}}>Shiko të gjitha â†’</span>
             </div>
             {PATIENTS.slice(0,4).map(p=>{
               const pct=Math.round(p.sessions/p.total*100);
@@ -561,16 +561,16 @@ const Dashboard = ({ user }) => {
               ))}
             </div>
             <div style={{display:"flex",justifyContent:"space-between",marginTop:12,paddingTop:12,borderTop:"1px solid #E8ECF2"}}>
-              <div><div style={{fontSize:11,color:"#5A6A7E"}}>Termine/javÃ«</div><div style={{fontSize:16,fontWeight:700,color:"#1A2332"}}>47</div></div>
+              <div><div style={{fontSize:11,color:"#5A6A7E"}}>Termine/javë</div><div style={{fontSize:16,fontWeight:700,color:"#1A2332"}}>47</div></div>
               <div style={{textAlign:"right"}}><div style={{fontSize:11,color:"#5A6A7E"}}>Prezenca</div><div style={{fontSize:16,fontWeight:700,color:"#22C55E"}}>94%</div></div>
             </div>
           </div>
           <div style={{background:"linear-gradient(135deg,#2563EB,#4A90D9)",borderRadius:14,padding:"18px 16px",color:"white"}}>
-            <div style={{fontSize:12,opacity:.8,marginBottom:4}}>TÃ« ardhurat e muajit</div>
+            <div style={{fontSize:12,opacity:.8,marginBottom:4}}>Të ardhurat e muajit</div>
             <div style={{fontSize:28,fontWeight:700,marginBottom:2}}>â‚¬3,240</div>
             <div style={{fontSize:12,opacity:.8,marginBottom:16}}>Prill 2026</div>
             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
-              {[{l:"Paguar",v:"â‚¬2,860"},{l:"NÃ« pritje",v:"â‚¬380"},{l:"Fatura",v:"38"},{l:"Seanca",v:"142"}].map(x=>(
+              {[{l:"Paguar",v:"â‚¬2,860"},{l:"Në pritje",v:"â‚¬380"},{l:"Fatura",v:"38"},{l:"Seanca",v:"142"}].map(x=>(
                 <div key={x.l} style={{background:"rgba(255,255,255,.15)",borderRadius:8,padding:"8px 10px"}}>
                   <div style={{fontSize:11,opacity:.8}}>{x.l}</div>
                   <div style={{fontSize:15,fontWeight:700}}>{x.v}</div>
@@ -580,8 +580,8 @@ const Dashboard = ({ user }) => {
           </div>
           <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
             <div style={{padding:"14px 16px",borderBottom:"1px solid #E8ECF2",fontSize:13,fontWeight:600,color:"#1A2332"}}>Aktiviteti</div>
-            {[{icon:"check",bg:"#F0FDF4",ic:"#22C55E",text:"Arjeta kreu seancÃ«n 4-tÃ«",time:"2h"},
-              {icon:"payments",bg:"#EBF4FF",ic:"#2563EB",text:"FaturÃ« paguar â‚¬65",time:"3h"},
+            {[{icon:"check",bg:"#F0FDF4",ic:"#22C55E",text:"Arjeta kreu seancën 4-të",time:"2h"},
+              {icon:"payments",bg:"#EBF4FF",ic:"#2563EB",text:"Faturë paguar â‚¬65",time:"3h"},
               {icon:"patients",bg:"#FFFBEB",ic:"#F59E0B",text:"Pacient i ri: Liridon Gashi",time:"5h"}].map((a,i)=>(
               <div key={i} style={{display:"flex",alignItems:"flex-start",gap:10,padding:"10px 16px",borderBottom:"1px solid #F5F7FA"}}>
                 <div style={{width:28,height:28,borderRadius:"50%",background:a.bg,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
@@ -589,7 +589,7 @@ const Dashboard = ({ user }) => {
                 </div>
                 <div>
                   <div style={{fontSize:12,color:"#1A2332"}}>{a.text}</div>
-                  <div style={{fontSize:11,color:"#9DABBE",marginTop:2}}>{a.time} mÃ« parÃ«</div>
+                  <div style={{fontSize:11,color:"#9DABBE",marginTop:2}}>{a.time} më parë</div>
                 </div>
               </div>
             ))}
@@ -629,7 +629,7 @@ const PatientsPage = ({ initialSelected=null }) => {
               <Badge status={p.status}/>
               <div style={{marginTop:16,padding:"12px 0",borderTop:"1px solid #E8ECF2"}}>
                 <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,textAlign:"left"}}>
-                  {[{l:"Mosha",v:p.age+" vj"},{l:"DatÃ«lindja",v:p.dob},{l:"Telefon",v:p.phone},{l:"Adresa",v:p.address},{l:"Fizioterapis",v:p.therapist},{l:"Bilanci",v:`â‚¬${p.balance}`}].map(x=>(
+                  {[{l:"Mosha",v:p.age+" vj"},{l:"Datëlindja",v:p.dob},{l:"Telefon",v:p.phone},{l:"Adresa",v:p.address},{l:"Fizioterapis",v:p.therapist},{l:"Bilanci",v:`â‚¬${p.balance}`}].map(x=>(
                     <div key={x.l}><div style={{fontSize:10,color:"#9DABBE",fontWeight:600,textTransform:"uppercase"}}>{x.l}</div><div style={{fontSize:12,fontWeight:500,color:"#1A2332",marginTop:2}}>{x.v}</div></div>
                   ))}
                 </div>
@@ -644,20 +644,20 @@ const PatientsPage = ({ initialSelected=null }) => {
               <div style={{background:"#F1F3F7",borderRadius:20,height:8,overflow:"hidden"}}>
                 <div style={{height:"100%",borderRadius:20,background:"linear-gradient(90deg,#4A90D9,#2563EB)",width:`${pct}%`}}/>
               </div>
-              <div style={{fontSize:11,color:"#5A6A7E",marginTop:6}}>{pct}% e planit tÃ« trajtimit</div>
+              <div style={{fontSize:11,color:"#5A6A7E",marginTop:6}}>{pct}% e planit të trajtimit</div>
             </div>
           </div>
           <div style={{display:"flex",flexDirection:"column",gap:14}}>
             <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
-              <div style={{padding:"14px 18px",borderBottom:"1px solid #E8ECF2",fontSize:13,fontWeight:600,color:"#1A2332"}}>SOAP ShÃ«nime Klinike</div>
-              {[{date:"01 Apr",therapist:"Dr. Morina",s:"Dhimbje e poshtme e shpinÃ«s, intensitet 6/10",o:"ROM kufizuar, tensioni muskulor i lartÃ«",a:"Lumbalgjia akute",p:"Termokompresa + masazh 3x/javÃ«"},
-                {date:"25 Mar",therapist:"Dr. Morina",s:"Dhimbje 4/10, pÃ«rmirÃ«sim i lehtÃ«",o:"ROM i pÃ«rmirÃ«suar 20%, tensioni zvogÃ«luar",a:"Lumbalgjia subakute",p:"Vazhdo planin aktual, shto ushtrime"}].map((n,i)=>(
+              <div style={{padding:"14px 18px",borderBottom:"1px solid #E8ECF2",fontSize:13,fontWeight:600,color:"#1A2332"}}>SOAP Shënime Klinike</div>
+              {[{date:"01 Apr",therapist:"Dr. Morina",s:"Dhimbje e poshtme e shpinës, intensitet 6/10",o:"ROM kufizuar, tensioni muskulor i lartë",a:"Lumbalgjia akute",p:"Termokompresa + masazh 3x/javë"},
+                {date:"25 Mar",therapist:"Dr. Morina",s:"Dhimbje 4/10, përmirësim i lehtë",o:"ROM i përmirësuar 20%, tensioni zvogëluar",a:"Lumbalgjia subakute",p:"Vazhdo planin aktual, shto ushtrime"}].map((n,i)=>(
                 <div key={i} style={{padding:"14px 18px",borderBottom:"1px solid #F5F7FA"}}>
                   <div style={{display:"flex",justifyContent:"space-between",marginBottom:10}}>
                     <span style={{fontSize:12,fontWeight:600,color:"#1A2332"}}>{n.date}</span>
                     <span style={{fontSize:11,color:"#9DABBE"}}>{n.therapist}</span>
                   </div>
-                  {[["S â€” Subjektive",n.s],["O â€” Objektive",n.o],["A â€” VlerÃ«simi",n.a],["P â€” Plani",n.p]].map(([l,v])=>(
+                  {[["S â€” Subjektive",n.s],["O â€” Objektive",n.o],["A â€” Vlerësimi",n.a],["P â€” Plani",n.p]].map(([l,v])=>(
                     <div key={l} style={{marginBottom:5}}>
                       <span style={{fontSize:10,fontWeight:700,color:"#2563EB",marginRight:6}}>{l}</span>
                       <span style={{fontSize:12,color:"#5A6A7E"}}>{v}</span>
@@ -676,8 +676,8 @@ const PatientsPage = ({ initialSelected=null }) => {
     <div>
       <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:24}}>
         <div>
-          <h1 style={{fontSize:22,fontWeight:700,color:"#1A2332",margin:0}}>PacientÃ«t</h1>
-          <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>{filtered.length} pacientÃ«</p>
+          <h1 style={{fontSize:22,fontWeight:700,color:"#1A2332",margin:0}}>Pacientët</h1>
+          <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>{filtered.length} pacientë</p>
         </div>
         <button style={{display:"flex",alignItems:"center",gap:8,padding:"10px 18px",background:"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:10,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>
           <Icon name="plus" size={15} color="#fff"/> Pacient i Ri
@@ -686,12 +686,12 @@ const PatientsPage = ({ initialSelected=null }) => {
       <div style={{display:"flex",gap:10,marginBottom:20}}>
         <div style={{flex:1,display:"flex",alignItems:"center",gap:8,background:"#fff",border:"1px solid #E8ECF2",borderRadius:10,padding:"9px 14px"}}>
           <Icon name="search" size={15} color="#9DABBE"/>
-          <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="KÃ«rko pacient..." style={{border:"none",outline:"none",fontSize:13,color:"#1A2332",fontFamily:"'DM Sans',sans-serif",flex:1,background:"none"}}/>
+          <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Kërko pacient..." style={{border:"none",outline:"none",fontSize:13,color:"#1A2332",fontFamily:"'DM Sans',sans-serif",flex:1,background:"none"}}/>
           {search&&<div onClick={()=>setSearch("")} style={{cursor:"pointer",opacity:.5}}><Icon name="x" size={13} color="#5A6A7E"/></div>}
         </div>
         {["all","active","new","inactive"].map(f=>(
           <button key={f} onClick={()=>setFilter(f)} style={{padding:"9px 16px",border:"1px solid",borderColor:filter===f?"#2563EB":"#E8ECF2",borderRadius:10,background:filter===f?"#EBF4FF":"#fff",color:filter===f?"#2563EB":"#5A6A7E",fontSize:12,fontWeight:500,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>
-            {f==="all"?"TÃ« gjithÃ«":f==="active"?"AktivÃ«":f==="new"?"TÃ« Rinj":"JoaktivÃ«"}
+            {f==="all"?"Të gjithë":f==="active"?"Aktivë":f==="new"?"Të Rinj":"Joaktivë"}
           </button>
         ))}
       </div>
@@ -702,8 +702,8 @@ const PatientsPage = ({ initialSelected=null }) => {
         {filtered.length===0&&(
           <div style={{padding:40,textAlign:"center",color:"#9DABBE"}}>
             <div style={{fontSize:32,marginBottom:8}}>ðŸ”</div>
-            <div style={{fontSize:14,fontWeight:600,color:"#5A6A7E"}}>Nuk u gjet asnjÃ« pacient</div>
-            <div style={{fontSize:12,marginTop:4}}>Provo kÃ«rkim tjetÃ«r</div>
+            <div style={{fontSize:14,fontWeight:600,color:"#5A6A7E"}}>Nuk u gjet asnjë pacient</div>
+            <div style={{fontSize:12,marginTop:4}}>Provo kërkim tjetër</div>
           </div>
         )}
         {filtered.map(p=>{
@@ -715,7 +715,7 @@ const PatientsPage = ({ initialSelected=null }) => {
               onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
               <div style={{display:"flex",alignItems:"center",gap:10}}>
                 <Avatar name={p.name} size={34} bg="#EBF4FF" color="#2563EB"/>
-                <div><div style={{fontSize:13,fontWeight:500,color:"#1A2332"}}>{p.name}</div><div style={{fontSize:11,color:"#9DABBE"}}>{p.age} vjeÃ§</div></div>
+                <div><div style={{fontSize:13,fontWeight:500,color:"#1A2332"}}>{p.name}</div><div style={{fontSize:11,color:"#9DABBE"}}>{p.age} vjeç</div></div>
               </div>
               <div style={{fontSize:12,color:"#5A6A7E"}}>{p.condition}</div>
               <div>
@@ -746,7 +746,7 @@ const PatientsPage = ({ initialSelected=null }) => {
 const AppointmentsPage = () => {
   const [activeDay,setActiveDay]=useState(1);
   const days=Array.from({length:30},(_,i)=>i+1);
-  const dayNames=["Di","HÃ«","Ma","MÃ«","En","Pr","Sh"];
+  const dayNames=["Di","Hë","Ma","Më","En","Pr","Sh"];
   const getDayName=d=>dayNames[(d+1)%7];
   const dayAppts=APPOINTMENTS.filter(a=>parseInt(a.date.split("-")[2])===activeDay);
   return (
@@ -778,7 +778,7 @@ const AppointmentsPage = () => {
             <span style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>{dayAppts.length} terme â€” {activeDay} Prill</span>
           </div>
           {dayAppts.length===0?(
-            <div style={{padding:40,textAlign:"center",color:"#9DABBE",fontSize:14}}>Nuk ka termine pÃ«r kÃ«tÃ« ditÃ«</div>
+            <div style={{padding:40,textAlign:"center",color:"#9DABBE",fontSize:14}}>Nuk ka termine për këtë ditë</div>
           ):dayAppts.map(a=>(
             <div key={a.id} style={{display:"flex",alignItems:"center",gap:14,padding:"14px 18px",borderBottom:"1px solid #F5F7FA",cursor:"pointer"}}
               onMouseEnter={e=>e.currentTarget.style.background="#FAFBFD"}
@@ -813,7 +813,7 @@ const AppointmentsPage = () => {
               </div>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(7,1fr)",gap:2,marginBottom:6}}>
-              {["HÃ«","Ma","MÃ«","En","Pr","Sh","Di"].map(d=>(
+              {["Hë","Ma","Më","En","Pr","Sh","Di"].map(d=>(
                 <div key={d} style={{textAlign:"center",fontSize:10,fontWeight:600,color:"#9DABBE",padding:"4px 0"}}>{d}</div>
               ))}
             </div>
@@ -868,24 +868,24 @@ const PaymentsPage = () => {
             <Icon name="download" size={14} color="#5A6A7E"/> Eksporto
           </button>
           <button style={{display:"flex",alignItems:"center",gap:8,padding:"10px 18px",background:"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:10,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>
-            <Icon name="plus" size={15} color="#fff"/> FaturÃ« e Re
+            <Icon name="plus" size={15} color="#fff"/> Faturë e Re
           </button>
         </div>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14,marginBottom:20}}>
-        <StatCard icon="payments" label="Total Mujoror" value="â‚¬3,240" change="+8.3% vs muajit parÃ«" changeUp accent="blue"/>
+        <StatCard icon="payments" label="Total Mujoror" value="â‚¬3,240" change="+8.3% vs muajit parë" changeUp accent="blue"/>
         <StatCard icon="check" label="Paguar" value="â‚¬2,860" change="38 fatura" changeUp accent="green"/>
-        <StatCard icon="clock" label="NÃ« Pritje" value="â‚¬380" change="3 fatura" changeUp={false} accent="amber"/>
-        <StatCard icon="x" label="Vonuara" value="â‚¬90" change="1 faturÃ«" changeUp={false} accent="red"/>
+        <StatCard icon="clock" label="Në Pritje" value="â‚¬380" change="3 fatura" changeUp={false} accent="amber"/>
+        <StatCard icon="x" label="Vonuara" value="â‚¬90" change="1 faturë" changeUp={false} accent="red"/>
       </div>
       <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
         <div style={{display:"flex",alignItems:"center",gap:4,padding:"12px 16px",borderBottom:"1px solid #E8ECF2",background:"#FAFBFD"}}>
-          {[{k:"all",l:"TÃ« gjitha"},{k:"paid",l:"Paguar"},{k:"pending",l:"NÃ« pritje"},{k:"overdue",l:"Vonuara"}].map(t=>(
+          {[{k:"all",l:"Të gjitha"},{k:"paid",l:"Paguar"},{k:"pending",l:"Në pritje"},{k:"overdue",l:"Vonuara"}].map(t=>(
             <button key={t.k} onClick={()=>setTab(t.k)} style={{padding:"6px 14px",borderRadius:8,border:"none",background:tab===t.k?"#2563EB":"transparent",color:tab===t.k?"#fff":"#5A6A7E",fontSize:12,fontWeight:500,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>{t.l}</button>
           ))}
         </div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1.2fr 1fr 1fr 0.8fr 80px",padding:"10px 18px",borderBottom:"1px solid #E8ECF2",fontSize:11,fontWeight:700,color:"#9DABBE",textTransform:"uppercase",letterSpacing:".06em"}}>
-          <span>Nr. FaturÃ«s</span><span>Pacienti</span><span>ShÃ«rbimi</span><span>Data</span><span>Shuma</span><span>Statusi</span>
+          <span>Nr. Faturës</span><span>Pacienti</span><span>Shërbimi</span><span>Data</span><span>Shuma</span><span>Statusi</span>
         </div>
         {filtered.map(inv=>(
           <div key={inv.id}
@@ -910,10 +910,10 @@ const PaymentsPage = () => {
 
 // â”€â”€â”€ SHARED CLINICS STATE (lifted up via props) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const INITIAL_CLINICS_2 = [
-  {id:1,name:"Ordinanca Krasniqi",city:"PrishtinÃ«",users:4,patients:67,status:"active",revenue:4200,since:"Jan 2024",logo:null,phone:"044 100 200",email:"info@krasniqi.com",address:"Rr. Agim Ramadani 12, PrishtinÃ«"},
-  {id:2,name:"Fizio Center Peja",city:"PejÃ«",users:3,patients:45,status:"active",revenue:3100,since:"Mar 2024",logo:null,phone:"039 200 300",email:"peja@fiziocenter.com",address:"Rr. MbretÃ«resha TeutÃ« 5, PejÃ«"},
-  {id:3,name:"RehabPro Gjilan",city:"Gjilan",users:5,patients:89,status:"active",revenue:5800,since:"Nov 2023",logo:null,phone:"0280 300 400",email:"gjilan@rehabpro.com",address:"Rr. DÃ«shmorÃ«t e Kombit 8, Gjilan"},
-  {id:4,name:"Vita Fizio",city:"MitrovicÃ«",users:2,patients:23,status:"inactive",revenue:1200,since:"Jun 2024",logo:null,phone:"028 400 500",email:"vita@fizio.com",address:"Rr. SkÃ«nderbeu 22, MitrovicÃ«"},
+  {id:1,name:"Ordinanca Krasniqi",city:"Prishtinë",users:4,patients:67,status:"active",revenue:4200,since:"Jan 2024",logo:null,phone:"044 100 200",email:"info@krasniqi.com",address:"Rr. Agim Ramadani 12, Prishtinë"},
+  {id:2,name:"Fizio Center Peja",city:"Pejë",users:3,patients:45,status:"active",revenue:3100,since:"Mar 2024",logo:null,phone:"039 200 300",email:"peja@fiziocenter.com",address:"Rr. Mbretëresha Teutë 5, Pejë"},
+  {id:3,name:"RehabPro Gjilan",city:"Gjilan",users:5,patients:89,status:"active",revenue:5800,since:"Nov 2023",logo:null,phone:"0280 300 400",email:"gjilan@rehabpro.com",address:"Rr. Dëshmorët e Kombit 8, Gjilan"},
+  {id:4,name:"Vita Fizio",city:"Mitrovicë",users:2,patients:23,status:"inactive",revenue:1200,since:"Jun 2024",logo:null,phone:"028 400 500",email:"vita@fizio.com",address:"Rr. Skënderbeu 22, Mitrovicë"},
   {id:5,name:"Sport Rehab",city:"Prizren",users:3,patients:41,status:"active",revenue:2900,since:"Feb 2024",logo:null,phone:"029 500 600",email:"sport@rehab.com",address:"Rr. Remzi Ademaj 3, Prizren"},
 ];
 
@@ -934,7 +934,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
   const handleFile=e=>{const f=e.target.files[0];if(f){const r=new FileReader();r.onload=ev=>setLogoPreview(ev.target.result);r.readAsDataURL(f);}};
 
   const handleSubmit=()=>{
-    if(!form.name.trim()||!form.city.trim()){showToast("âš  PlotÃ«so fushat e detyrueshme!");return;}
+    if(!form.name.trim()||!form.city.trim()){showToast("âš  Plotëso fushat e detyrueshme!");return;}
     const nc={id:Date.now(),name:form.name,city:form.city,phone:form.phone,email:form.email,address:form.address,
       users:1,patients:0,status:"active",revenue:0,since:"Apr 2026",logo:logoPreview,admins:[],
       treatmentTypes:["Fizioterapi","Rehabilitim","Masazh terapeutik"]};
@@ -946,7 +946,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
   const toggleStatus=id=>setClinics(prev=>prev.map(c=>c.id===id?{...c,status:c.status==="active"?"inactive":"active"}:c));
 
   const addAdmin=()=>{
-    if(!adminForm.name||!adminForm.pin){showToast("âš  Emri dhe PIN janÃ« tÃ« detyrueshÃ«m!");return;}
+    if(!adminForm.name||!adminForm.pin){showToast("âš  Emri dhe PIN janë të detyrueshëm!");return;}
     const newAdmin={id:Date.now(),name:adminForm.name,username:adminForm.username||adminForm.name.toLowerCase().replace(/\s/g,""),pin:adminForm.pin,role:"admin"};
     setClinics(prev=>prev.map(c=>c.id===selected.id?{...c,admins:[...(c.admins||[]),newAdmin],users:(c.users||0)+1}:c));
     setSelected(prev=>({...prev,admins:[...(prev.admins||[]),newAdmin]}));
@@ -1033,26 +1033,26 @@ const ClinicsPage = ({ clinics, setClinics }) => {
   </div>
   <div class="title-block">
     <div>
-      <h2>Raporti i TerapisÃ«</h2>
+      <h2>Raporti i Terapisë</h2>
       <p>${clinic.name} â€” ${clinic.city}</p>
     </div>
     <div class="period">${therapy.date||"Prill 2026"}</div>
   </div>
   <div class="info-grid">
     <div class="info-box"><div class="lbl">Pacienti</div><div class="val">${therapy.patient}</div></div>
-    <div class="info-box"><div class="lbl">Lloji i TerapisÃ«</div><div class="val">${therapy.type}</div></div>
+    <div class="info-box"><div class="lbl">Lloji i Terapisë</div><div class="val">${therapy.type}</div></div>
     <div class="info-box"><div class="lbl">Fizioterapis</div><div class="val">${therapy.therapist||"â€”"}</div></div>
     <div class="info-box"><div class="lbl">Data</div><div class="val">${therapy.date||"â€”"}</div></div>
-    <div class="info-box"><div class="lbl">KohÃ«zgjatja</div><div class="val">${therapy.duration||45} min</div></div>
+    <div class="info-box"><div class="lbl">Kohëzgjatja</div><div class="val">${therapy.duration||45} min</div></div>
     <div class="info-box"><div class="lbl">Statusi</div><div class="val" style="color:#15803D">âœ“ Kryer</div></div>
   </div>
-  <div class="section-title">ShÃ«nime Klinike & VÃ«rejtje</div>
-  <div class="notes-box">${therapy.notes||"Nuk ka shÃ«nime shtesÃ«."}</div>
+  <div class="section-title">Shënime Klinike & Vërejtje</div>
+  <div class="notes-box">${therapy.notes||"Nuk ka shënime shtesë."}</div>
   <div class="section-title">Progresi & Rekomandimet</div>
-  <div class="notes-box" style="min-height:100px">Shkruaj progresin dhe rekomandimet pÃ«r seancÃ«n tjetÃ«r...</div>
+  <div class="notes-box" style="min-height:100px">Shkruaj progresin dhe rekomandimet për seancën tjetër...</div>
   <div class="sig-grid">
-    <div class="sig-box">NÃ«nshkrimi i Fizioterapistit: ${therapy.therapist||""}</div>
-    <div class="sig-box">NÃ«nshkrimi i Pacientit: ${therapy.patient}</div>
+    <div class="sig-box">Nënshkrimi i Fizioterapistit: ${therapy.therapist||""}</div>
+    <div class="sig-box">Nënshkrimi i Pacientit: ${therapy.patient}</div>
   </div>
   <div class="footer">
     <span>${clinic.name} Â· ${clinic.city} Â· Fizioapp</span>
@@ -1075,7 +1075,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 320px",gap:20}}>
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:28}}>
-          <h3 style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:20,marginTop:0}}>Detajet e TerapisÃ«</h3>
+          <h3 style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:20,marginTop:0}}>Detajet e Terapisë</h3>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
             <div>
               <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>Pacienti *</label>
@@ -1088,7 +1088,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
                 onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
             </div>
             <div>
-              <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>Lloji i TerapisÃ« *</label>
+              <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>Lloji i Terapisë *</label>
               <select value={therapyForm.type} onChange={e=>setTherapyForm(p=>({...p,type:e.target.value}))} style={{...inputStyle,cursor:"pointer"}}>
                 <option value="">-- Zgjidh llojin --</option>
                 {(selected.treatmentTypes||[]).map(t=><option key={t}>{t}</option>)}
@@ -1100,26 +1100,26 @@ const ClinicsPage = ({ clinics, setClinics }) => {
                 onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
             </div>
             <div>
-              <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>KohÃ«zgjatja (min)</label>
+              <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>Kohëzgjatja (min)</label>
               <input type="number" value={therapyForm.duration} onChange={e=>setTherapyForm(p=>({...p,duration:parseInt(e.target.value)||45}))} style={inputStyle}
                 onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
             </div>
           </div>
           <div style={{marginTop:16}}>
-            <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>ShÃ«nime Klinike</label>
-            <textarea value={therapyForm.notes} onChange={e=>setTherapyForm(p=>({...p,notes:e.target.value}))} placeholder="Diagnoza, progresi, vÃ«rejtje klinike..."
+            <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>Shënime Klinike</label>
+            <textarea value={therapyForm.notes} onChange={e=>setTherapyForm(p=>({...p,notes:e.target.value}))} placeholder="Diagnoza, progresi, vërejtje klinike..."
               style={{...inputStyle,height:100,resize:"vertical"}} onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
           </div>
           <div style={{display:"flex",gap:10,marginTop:20}}>
             <button onClick={()=>{
-              if(!therapyForm.patient||!therapyForm.type){showToast("âš  Pacienti dhe lloji janÃ« tÃ« detyrueshÃ«m!");return;}
+              if(!therapyForm.patient||!therapyForm.type){showToast("âš  Pacienti dhe lloji janë të detyrueshëm!");return;}
               showToast("âœ“ Terapia u regjistrua!");
               printTherapyA4(therapyForm,selected);
             }} style={{padding:"11px 22px",background:"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:9,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>
               Regjistro & Printo A4
             </button>
             <button onClick={()=>{
-              if(!therapyForm.patient||!therapyForm.type){showToast("âš  Pacienti dhe lloji janÃ« tÃ« detyrueshÃ«m!");return;}
+              if(!therapyForm.patient||!therapyForm.type){showToast("âš  Pacienti dhe lloji janë të detyrueshëm!");return;}
               showToast("âœ“ Terapia u regjistrua!");setView("detail");
             }} style={{padding:"11px 18px",border:"1px solid #E8ECF2",borderRadius:9,background:"#fff",fontSize:13,fontWeight:500,cursor:"pointer",color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>
               Regjistro pa Print
@@ -1139,11 +1139,11 @@ const ClinicsPage = ({ clinics, setClinics }) => {
                 {t}
               </div>
             ))}
-            {(selected.treatmentTypes||[]).length===0&&<div style={{fontSize:12,color:"#9DABBE"}}>Nuk ka lloje tÃ« regjistruara.</div>}
+            {(selected.treatmentTypes||[]).length===0&&<div style={{fontSize:12,color:"#9DABBE"}}>Nuk ka lloje të regjistruara.</div>}
           </div>
           <div style={{background:"#FFFBEB",border:"1px solid #FDE68A",borderRadius:12,padding:14}}>
             <div style={{fontSize:11,fontWeight:700,color:"#92400E",marginBottom:4}}>ðŸ’¡ PDF automatik</div>
-            <div style={{fontSize:11,color:"#78350F"}}>Klikimi i "Regjistro & Printo A4" do hapÃ« automatikisht dokumentin profesional A4 gati pÃ«r printim ose ruajtje si PDF.</div>
+            <div style={{fontSize:11,color:"#78350F"}}>Klikimi i "Regjistro & Printo A4" do hapë automatikisht dokumentin profesional A4 gati për printim ose ruajtje si PDF.</div>
           </div>
         </div>
       </div>
@@ -1161,7 +1161,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
       <div style={{display:"grid",gridTemplateColumns:"1fr 340px",gap:20}}>
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:24}}>
           <div style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:4}}>Llojet aktuale</div>
-          <div style={{fontSize:12,color:"#9DABBE",marginBottom:16}}>{(selected.treatmentTypes||[]).length} lloje tÃ« regjistruara</div>
+          <div style={{fontSize:12,color:"#9DABBE",marginBottom:16}}>{(selected.treatmentTypes||[]).length} lloje të regjistruara</div>
           {(selected.treatmentTypes||[]).map(t=>(
             <div key={t} style={{display:"flex",alignItems:"center",gap:10,padding:"10px 14px",background:"#F8FAFF",border:"1px solid #E8ECF2",borderRadius:9,marginBottom:8}}>
               <div style={{width:8,height:8,borderRadius:"50%",background:"#2563EB",flexShrink:0}}/>
@@ -1173,11 +1173,11 @@ const ClinicsPage = ({ clinics, setClinics }) => {
           ))}
         </div>
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:24}}>
-          <div style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:16}}>Shto Lloj tÃ« Ri</div>
-          <input value={newType} onChange={e=>setNewType(e.target.value)} onKeyDown={e=>e.key==="Enter"&&addTreatmentType()} placeholder="p.sh. AkupunkturÃ«" style={inputStyle}
+          <div style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:16}}>Shto Lloj të Ri</div>
+          <input value={newType} onChange={e=>setNewType(e.target.value)} onKeyDown={e=>e.key==="Enter"&&addTreatmentType()} placeholder="p.sh. Akupunkturë" style={inputStyle}
             onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
           <div style={{marginTop:14,fontSize:11,color:"#9DABBE",marginBottom:10}}>Ose zgjidh nga lista standarde:</div>
-          {["Fizioterapi","Rehabilitim","Masazh terapeutik","Elektroterapi","Ultrasonik","Termokompresa","AkupunkturÃ«","Kineziterapi","Hidroterapi","Lazer terapi","Osteopatia","Manual terapi"].filter(t=>!(selected.treatmentTypes||[]).includes(t)).map(t=>(
+          {["Fizioterapi","Rehabilitim","Masazh terapeutik","Elektroterapi","Ultrasonik","Termokompresa","Akupunkturë","Kineziterapi","Hidroterapi","Lazer terapi","Osteopatia","Manual terapi"].filter(t=>!(selected.treatmentTypes||[]).includes(t)).map(t=>(
             <div key={t} onClick={()=>setNewType(t)} style={{padding:"7px 12px",borderRadius:7,marginBottom:4,cursor:"pointer",fontSize:12,color:"#5A6A7E",background:"#F5F7FF",transition:"all .1s"}}
               onMouseEnter={e=>{e.currentTarget.style.background="#EBF4FF";e.currentTarget.style.color="#2563EB";}}
               onMouseLeave={e=>{e.currentTarget.style.background="#F5F7FF";e.currentTarget.style.color="#5A6A7E";}}>
@@ -1204,7 +1204,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:28}}>
           <div style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:20}}>Detajet e Administratorit</div>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16,marginBottom:16}}>
-            {[{l:"Emri i plotÃ« *",k:"name",ph:"Emri Mbiemri"},
+            {[{l:"Emri i plotë *",k:"name",ph:"Emri Mbiemri"},
               {l:"Username",k:"username",ph:"emri.mbiemri"},
             ].map(f=>(
               <div key={f.k}>
@@ -1215,17 +1215,17 @@ const ClinicsPage = ({ clinics, setClinics }) => {
             ))}
           </div>
           <div style={{marginBottom:20}}>
-            <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>PIN i KyÃ§jes sÃ« ShpejtÃ« *</label>
+            <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>PIN i Kyçjes së Shpejtë *</label>
             <div style={{position:"relative",display:"flex",alignItems:"center"}}>
               <input value={adminForm.pin} onChange={e=>setAdminForm(p=>({...p,pin:e.target.value.replace(/\D/g,"").slice(0,6)}))} placeholder="p.sh. 1234" maxLength={6}
                 style={{...inputStyle,letterSpacing:adminForm.pin?"8px":"0px",fontWeight:700,fontSize:18}}
                 onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
             </div>
-            <div style={{fontSize:11,color:"#9DABBE",marginTop:6}}>Ky PIN do pÃ«rdoret pÃ«r kyÃ§je tÃ« shpejtÃ« nÃ« ekranin numpad. 1â€“6 shifra.</div>
+            <div style={{fontSize:11,color:"#9DABBE",marginTop:6}}>Ky PIN do përdoret për kyçje të shpejtë në ekranin numpad. 1â€“6 shifra.</div>
           </div>
           <div style={{padding:"12px 14px",background:"#EBF4FF",border:"1px solid #BFDBFE",borderRadius:10,marginBottom:20}}>
-            <div style={{fontSize:11,fontWeight:700,color:"#2563EB",marginBottom:3}}>ðŸ“± Si funksionon kyÃ§ja me PIN</div>
-            <div style={{fontSize:11,color:"#1D4ED8"}}>Kur aplikacioni hapet, shfaqet numpad. Administratori shtyp PIN-in e vet dhe kyÃ§et direkt nÃ« ordinancÃ«n e tij pa nevojÃ« pÃ«r username/fjalÃ«kalim.</div>
+            <div style={{fontSize:11,fontWeight:700,color:"#2563EB",marginBottom:3}}>ðŸ“± Si funksionon kyçja me PIN</div>
+            <div style={{fontSize:11,color:"#1D4ED8"}}>Kur aplikacioni hapet, shfaqet numpad. Administratori shtyp PIN-in e vet dhe kyçet direkt në ordinancën e tij pa nevojë për username/fjalëkalim.</div>
           </div>
           <div style={{display:"flex",gap:10}}>
             <button onClick={()=>setView("detail")} style={{padding:"11px 20px",border:"1px solid #E8ECF2",borderRadius:9,background:"#fff",fontSize:13,fontWeight:500,cursor:"pointer",color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>Anulo</button>
@@ -1234,9 +1234,9 @@ const ClinicsPage = ({ clinics, setClinics }) => {
         </div>
         <div style={{display:"flex",flexDirection:"column",gap:14}}>
           <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:18}}>
-            <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:12}}>AdministratorÃ«t aktualÃ«</div>
+            <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:12}}>Administratorët aktualë</div>
             {(selected.admins||[]).length===0
-              ?<div style={{fontSize:12,color:"#9DABBE",textAlign:"center",padding:20}}>Nuk ka admin tÃ« regjistruar</div>
+              ?<div style={{fontSize:12,color:"#9DABBE",textAlign:"center",padding:20}}>Nuk ka admin të regjistruar</div>
               :(selected.admins||[]).map(a=>(
                 <div key={a.id} style={{display:"flex",alignItems:"center",gap:10,padding:"10px 12px",background:"#F8FAFF",borderRadius:9,border:"1px solid #E8ECF2",marginBottom:8}}>
                   <div style={{width:32,height:32,borderRadius:"50%",background:"linear-gradient(135deg,#4A90D9,#2563EB)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:700,color:"#fff",flexShrink:0}}>
@@ -1317,11 +1317,11 @@ const ClinicsPage = ({ clinics, setClinics }) => {
         <div style={{display:"flex",flexDirection:"column",gap:14}}>
           <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
             <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"14px 18px",borderBottom:"1px solid #E8ECF2"}}>
-              <span style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>AdministratorÃ«t & PIN ({(selected.admins||[]).length})</span>
+              <span style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>Administratorët & PIN ({(selected.admins||[]).length})</span>
               <button onClick={()=>setView("addAdmin")} style={{fontSize:12,color:"#2563EB",border:"none",background:"none",cursor:"pointer",fontWeight:600}}>+ Shto Admin</button>
             </div>
             {(selected.admins||[]).length===0
-              ?<div style={{padding:30,textAlign:"center",color:"#9DABBE",fontSize:13}}>Nuk ka administratorÃ«. Shto admin me PIN pÃ«r kyÃ§je tÃ« shpejtÃ«.</div>
+              ?<div style={{padding:30,textAlign:"center",color:"#9DABBE",fontSize:13}}>Nuk ka administratorë. Shto admin me PIN për kyçje të shpejtë.</div>
               :(selected.admins||[]).map(a=>(
                 <div key={a.id} style={{display:"flex",alignItems:"center",gap:12,padding:"14px 18px",borderBottom:"1px solid #F5F7FA"}}>
                   <div style={{width:40,height:40,borderRadius:"50%",background:"linear-gradient(135deg,#4A90D9,#2563EB)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:13,fontWeight:700,color:"#fff",flexShrink:0}}>
@@ -1329,7 +1329,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
                   </div>
                   <div style={{flex:1}}>
                     <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>{a.name}</div>
-                    <div style={{fontSize:11,color:"#9DABBE"}}>@{a.username} Â· Admin OrdinancÃ«s</div>
+                    <div style={{fontSize:11,color:"#9DABBE"}}>@{a.username} Â· Admin Ordinancës</div>
                   </div>
                   <div style={{background:"#EBF4FF",borderRadius:10,padding:"6px 14px",textAlign:"center"}}>
                     <div style={{fontSize:10,color:"#9DABBE",marginBottom:2}}>PIN</div>
@@ -1342,7 +1342,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
           <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:18}}>
             <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:14}}>Statistika</div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:12}}>
-              {[{l:"PacientÃ«",v:selected.patients},{l:"PÃ«rdorues",v:selected.users},{l:"TÃ« Ardhura",v:`â‚¬${(selected.revenue||0).toLocaleString()}`},{l:"Aktive nga",v:selected.since}].map(x=>(
+              {[{l:"Pacientë",v:selected.patients},{l:"Përdorues",v:selected.users},{l:"Të Ardhura",v:`â‚¬${(selected.revenue||0).toLocaleString()}`},{l:"Aktive nga",v:selected.since}].map(x=>(
                 <div key={x.l} style={{background:"#F8FAFF",borderRadius:10,padding:"12px 14px",textAlign:"center"}}>
                   <div style={{fontSize:18,fontWeight:700,color:"#1A2332"}}>{x.v}</div>
                   <div style={{fontSize:10,color:"#9DABBE",marginTop:3}}>{x.l}</div>
@@ -1361,14 +1361,14 @@ const ClinicsPage = ({ clinics, setClinics }) => {
       {toast&&<div style={{position:"fixed",top:24,right:24,background:"#1A2332",color:"#fff",padding:"12px 20px",borderRadius:10,fontSize:13,fontWeight:500,zIndex:9999,boxShadow:"0 4px 20px rgba(0,0,0,.2)"}}>{toast}</div>}
       <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:24}}>
         <button onClick={()=>setView("list")} style={{padding:"7px 14px",border:"1px solid #E8ECF2",borderRadius:8,background:"#fff",cursor:"pointer",fontSize:13,color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>â† Kthehu</button>
-        <h1 style={{fontSize:20,fontWeight:700,color:"#1A2332",margin:0}}>OrdinancÃ« e Re</h1>
+        <h1 style={{fontSize:20,fontWeight:700,color:"#1A2332",margin:0}}>Ordinancë e Re</h1>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 340px",gap:20}}>
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:28}}>
-          <h3 style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:20,marginTop:0}}>Informacionet e OrdinancÃ«s</h3>
+          <h3 style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:20,marginTop:0}}>Informacionet e Ordinancës</h3>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
-            {[{l:"Emri i OrdinancÃ«s *",k:"name",ph:"p.sh. Fizio Center"},
-              {l:"Qyteti *",k:"city",ph:"p.sh. PrishtinÃ«"},
+            {[{l:"Emri i Ordinancës *",k:"name",ph:"p.sh. Fizio Center"},
+              {l:"Qyteti *",k:"city",ph:"p.sh. Prishtinë"},
               {l:"Telefon",k:"phone",ph:"044 000 000"},
               {l:"Email",k:"email",ph:"info@ordinanca.com"},
             ].map(f=>(
@@ -1386,11 +1386,11 @@ const ClinicsPage = ({ clinics, setClinics }) => {
           </div>
           <div style={{display:"flex",gap:10,marginTop:24}}>
             <button onClick={()=>setView("list")} style={{padding:"11px 24px",border:"1px solid #E8ECF2",borderRadius:9,background:"#fff",fontSize:13,fontWeight:500,cursor:"pointer",color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>Anulo</button>
-            <button onClick={handleSubmit} style={{padding:"11px 28px",background:"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:9,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>Regjistro OrdinancÃ«n</button>
+            <button onClick={handleSubmit} style={{padding:"11px 28px",background:"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:9,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>Regjistro Ordinancën</button>
           </div>
         </div>
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:24}}>
-          <h3 style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:6,marginTop:0}}>Logo e OrdinancÃ«s</h3>
+          <h3 style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:6,marginTop:0}}>Logo e Ordinancës</h3>
           <p style={{fontSize:12,color:"#9DABBE",marginBottom:20}}>Ngarko logon nga kompjuteri yt (PNG, JPG, SVG).</p>
           <input ref={fileRef} type="file" accept="image/*" onChange={handleFile} style={{display:"none"}}/>
           {logoPreview
@@ -1407,7 +1407,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
               onMouseEnter={e=>{e.currentTarget.style.borderColor="#2563EB";e.currentTarget.style.background="#EBF4FF";}}
               onMouseLeave={e=>{e.currentTarget.style.borderColor="#BFDBFE";e.currentTarget.style.background="#F8FAFF";}}>
               <div style={{fontSize:28,marginBottom:8}}>ðŸ–¼</div>
-              <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:4}}>Kliko pÃ«r tÃ« ngarkuar</div>
+              <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:4}}>Kliko për të ngarkuar</div>
               <div style={{fontSize:11,color:"#9DABBE"}}>PNG, JPG, SVG â€” max 5MB</div>
             </div>}
         </div>
@@ -1425,7 +1425,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
           <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>{clinics.length} ordinanca gjithsej</p>
         </div>
         <button onClick={()=>setView("add")} style={{display:"flex",alignItems:"center",gap:8,padding:"10px 18px",background:"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:10,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>
-          <Icon name="plus" size={15} color="#fff"/> OrdinancÃ« e Re
+          <Icon name="plus" size={15} color="#fff"/> Ordinancë e Re
         </button>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14,marginBottom:20}}>
@@ -1437,17 +1437,17 @@ const ClinicsPage = ({ clinics, setClinics }) => {
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:"18px 20px"}}>
           <div style={{width:36,height:36,borderRadius:10,background:"#F0FDF4",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:12}}><Icon name="patients" size={18} color="#22C55E"/></div>
           <div style={{fontSize:26,fontWeight:700,color:"#1A2332"}}>{clinics.reduce((s,c)=>s+c.patients,0)}</div>
-          <div style={{fontSize:12,color:"#5A6A7E",marginTop:5}}>PacientÃ« Total</div>
+          <div style={{fontSize:12,color:"#5A6A7E",marginTop:5}}>Pacientë Total</div>
         </div>
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:"18px 20px"}}>
           <div style={{width:36,height:36,borderRadius:10,background:"#FFFBEB",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:12}}><Icon name="staff" size={18} color="#F59E0B"/></div>
           <div style={{fontSize:26,fontWeight:700,color:"#1A2332"}}>{clinics.reduce((s,c)=>s+(c.admins||[]).length,0)}</div>
-          <div style={{fontSize:12,color:"#5A6A7E",marginTop:5}}>AdminÃ« me PIN</div>
+          <div style={{fontSize:12,color:"#5A6A7E",marginTop:5}}>Adminë me PIN</div>
         </div>
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:"18px 20px"}}>
           <div style={{width:36,height:36,borderRadius:10,background:"#F0FDF4",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:12}}><Icon name="payments" size={18} color="#22C55E"/></div>
           <div style={{fontSize:26,fontWeight:700,color:"#1A2332"}}>â‚¬{clinics.reduce((s,c)=>s+c.revenue,0).toLocaleString()}</div>
-          <div style={{fontSize:12,color:"#5A6A7E",marginTop:5}}>TÃ« Ardhura Total</div>
+          <div style={{fontSize:12,color:"#5A6A7E",marginTop:5}}>Të Ardhura Total</div>
         </div>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(310px,1fr))",gap:14}}>
@@ -1472,7 +1472,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
             </div>
             <div style={{padding:"14px 18px"}}>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:10,marginBottom:12}}>
-                {[{l:"PacientÃ«",v:c.patients},{l:"AdminÃ« PIN",v:(c.admins||[]).length},{l:"TÃ« Ardhura",v:`â‚¬${c.revenue.toLocaleString()}`}].map(x=>(
+                {[{l:"Pacientë",v:c.patients},{l:"Adminë PIN",v:(c.admins||[]).length},{l:"Të Ardhura",v:`â‚¬${c.revenue.toLocaleString()}`}].map(x=>(
                   <div key={x.l}><div style={{fontSize:10,color:"#9DABBE",fontWeight:600,textTransform:"uppercase"}}>{x.l}</div><div style={{fontSize:13,fontWeight:700,color:"#1A2332",marginTop:2}}>{x.v}
   <div style={{display:"flex",gap:8,flexShrink:0,marginLeft:"auto"}}>
     <button onClick={() => openEdit(c)} style={{padding:"7px 10px",borderRadius:10,border:"1px solid #E8ECF2",background:"#fff",cursor:"pointer",fontSize:12,fontWeight:600}}>Edit</button>
@@ -1506,7 +1506,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
 
 // â”€â”€â”€ REPORTS + PER-CLINIC A4 PRINT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const ReportsPage = ({ clinics }) => {
-  const months=["Jan","Feb","Mar","Apr","Maj","Qer","Kor","Gus","Sht","Tet","NÃ«n","Dhj"];
+  const months=["Jan","Feb","Mar","Apr","Maj","Qer","Kor","Gus","Sht","Tet","Nën","Dhj"];
   const revenue=[1800,2100,2800,3240,0,0,0,0,0,0,0,0];
   const patients_=[45,52,67,89,0,0,0,0,0,0,0,0];
   const maxRev=Math.max(...revenue.filter(v=>v>0));
@@ -1540,7 +1540,7 @@ const ReportsPage = ({ clinics }) => {
       const cols=["#BFDBFE","#93C5FD","#60A5FA","#2563EB"];
       const ms=["Jan","Feb","Mar","Apr"];
       return `<div class="bar-col"><div class="bar-val">â‚¬${v.toLocaleString()}</div><div class="bar-fill" style="height:${h}px;background:${cols[i]}"></div><div class="bar-month">${ms[i]}</div></div>`;
-    }).join("")+["Maj","Qer","Kor","Gus","Sht","Tet","NÃ«n","Dhj"].map(m=>`<div class="bar-col"><div class="bar-fill" style="height:6px;background:#F1F3F7"></div><div class="bar-month">${m}</div></div>`).join("");
+    }).join("")+["Maj","Qer","Kor","Gus","Sht","Tet","Nën","Dhj"].map(m=>`<div class="bar-col"><div class="bar-fill" style="height:6px;background:#F1F3F7"></div><div class="bar-month">${m}</div></div>`).join("");
 
     const html=`<!DOCTYPE html>
 <html lang="sq">
@@ -1643,7 +1643,7 @@ const ReportsPage = ({ clinics }) => {
   <div class="no-print">
     <button class="btn-print" onclick="window.print()">ðŸ–¨ï¸ Printo A4</button>
     <button class="btn-close" onclick="window.close()">âœ• Mbyll</button>
-    <span class="preview-note">Raport pÃ«r: <strong>${clinic.name}</strong> â€” ${clinic.city}</span>
+    <span class="preview-note">Raport për: <strong>${clinic.name}</strong> â€” ${clinic.city}</span>
   </div>
 
   <!-- HEADER WITH CLINIC LOGO -->
@@ -1652,7 +1652,7 @@ const ReportsPage = ({ clinics }) => {
       ${generateLogoHtml(clinic)}
       <div class="clinic-name-block">
         <div class="cname">${clinic.name}</div>
-        <div class="csub">${clinic.city}, KosovÃ« Â· ${clinic.phone||''}</div>
+        <div class="csub">${clinic.city}, Kosovë Â· ${clinic.phone||''}</div>
         <div class="caddr">${clinic.address||''}</div>
       </div>
     </div>
@@ -1671,28 +1671,28 @@ const ReportsPage = ({ clinics }) => {
   <!-- TITLE -->
   <div class="title-block">
     <div>
-      <h2>Raport Mujor i PerformancÃ«s</h2>
-      <p>${clinic.name} â€” ${clinic.city} Â· Aktiv qÃ« nga ${clinic.since}</p>
+      <h2>Raport Mujor i Performancës</h2>
+      <p>${clinic.name} â€” ${clinic.city} Â· Aktiv që nga ${clinic.since}</p>
     </div>
     <div class="period">Prill 2026</div>
   </div>
 
   <!-- KPI -->
   <div class="kpi-grid">
-    <div class="kpi"><div class="kpi-icon">ðŸ‘¥</div><div class="kpi-val">${st.patients}</div><div class="kpi-label">PacientÃ« AktivÃ«</div><div class="kpi-change">â†‘ +8 vs muajit parÃ«</div></div>
-    <div class="kpi"><div class="kpi-icon">ðŸ“…</div><div class="kpi-val">${st.sessions}</div><div class="kpi-label">Seanca Totale</div><div class="kpi-change">â†‘ +14 vs muajit parÃ«</div></div>
-    <div class="kpi"><div class="kpi-icon">ðŸ’¶</div><div class="kpi-val">â‚¬${st.revenue.toLocaleString()}</div><div class="kpi-label">TÃ« Ardhura</div><div class="kpi-change">â†‘ +8.3% rritje</div></div>
+    <div class="kpi"><div class="kpi-icon">ðŸ‘¥</div><div class="kpi-val">${st.patients}</div><div class="kpi-label">Pacientë Aktivë</div><div class="kpi-change">â†‘ +8 vs muajit parë</div></div>
+    <div class="kpi"><div class="kpi-icon">ðŸ“…</div><div class="kpi-val">${st.sessions}</div><div class="kpi-label">Seanca Totale</div><div class="kpi-change">â†‘ +14 vs muajit parë</div></div>
+    <div class="kpi"><div class="kpi-icon">ðŸ’¶</div><div class="kpi-val">â‚¬${st.revenue.toLocaleString()}</div><div class="kpi-label">Të Ardhura</div><div class="kpi-change">â†‘ +8.3% rritje</div></div>
     <div class="kpi"><div class="kpi-icon">âœ…</div><div class="kpi-val">${st.attendance}%</div><div class="kpi-label">Prezenca</div><div class="kpi-change">â†‘ +2.1% muajin</div></div>
   </div>
 
   <!-- SUMMARY -->
   <div class="summary-box">
-    <h3>PÃ«rmbledhja Financiare â€” Prill 2026</h3>
+    <h3>Përmbledhja Financiare â€” Prill 2026</h3>
     <div class="summary-grid">
-      <div class="summary-item"><div class="s-val">â‚¬${st.paid.toLocaleString()}</div><div class="s-lbl">Pagesa tÃ« mbledhura</div></div>
-      <div class="summary-item"><div class="s-val">â‚¬${st.pending.toLocaleString()}</div><div class="s-lbl">NÃ« pritje tÃ« pagesÃ«s</div></div>
-      <div class="summary-item"><div class="s-val">${st.invoices}</div><div class="s-lbl">Fatura tÃ« lÃ«shuara</div></div>
-      <div class="summary-item"><div class="s-val">â‚¬${Math.round(st.revenue/Math.max(st.sessions,1))}</div><div class="s-lbl">Mesatarja pÃ«r seancÃ«</div></div>
+      <div class="summary-item"><div class="s-val">â‚¬${st.paid.toLocaleString()}</div><div class="s-lbl">Pagesa të mbledhura</div></div>
+      <div class="summary-item"><div class="s-val">â‚¬${st.pending.toLocaleString()}</div><div class="s-lbl">Në pritje të pagesës</div></div>
+      <div class="summary-item"><div class="s-val">${st.invoices}</div><div class="s-lbl">Fatura të lëshuara</div></div>
+      <div class="summary-item"><div class="s-val">â‚¬${Math.round(st.revenue/Math.max(st.sessions,1))}</div><div class="s-lbl">Mesatarja për seancë</div></div>
       <div class="summary-item"><div class="s-val">${clinic.users}</div><div class="s-lbl">Stafi aktiv</div></div>
       <div class="summary-item"><div class="s-val">${Math.round(st.paid/st.revenue*100)||97}%</div><div class="s-lbl">Shkalla e mbledhjes</div></div>
     </div>
@@ -1700,7 +1700,7 @@ const ReportsPage = ({ clinics }) => {
 
   <!-- CHART -->
   <div class="section">
-    <div class="section-title">Grafiku i TÃ« Ardhurave Mujore â€” 2026</div>
+    <div class="section-title">Grafiku i Të Ardhurave Mujore â€” 2026</div>
     <div class="chart-container">
       <div class="bars">${revenueRows}</div>
     </div>
@@ -1709,7 +1709,7 @@ const ReportsPage = ({ clinics }) => {
   <div class="two-col">
     <!-- PATIENTS -->
     <div class="section">
-      <div class="section-title">PacientÃ«t KryesorÃ«</div>
+      <div class="section-title">Pacientët Kryesorë</div>
       <table>
         <thead><tr><th>Pacienti</th><th>Diagnoza</th><th>Progres</th></tr></thead>
         <tbody>
@@ -1724,7 +1724,7 @@ const ReportsPage = ({ clinics }) => {
     <div class="section">
       <div class="section-title">Faturat e Fundit</div>
       <table>
-        <thead><tr><th>Nr. FaturÃ«s</th><th>Shuma</th><th>Statusi</th></tr></thead>
+        <thead><tr><th>Nr. Faturës</th><th>Shuma</th><th>Statusi</th></tr></thead>
         <tbody>
           ${INVOICES.map(inv=>{
             const bc=inv.status==="paid"?"badge-green":inv.status==="overdue"?"badge-red":"badge-amber";
@@ -1751,9 +1751,9 @@ const ReportsPage = ({ clinics }) => {
   <div class="section">
     <div class="section-title">Terminet e Muajit</div>
     <div class="appt-grid">
-      <div class="appt-box" style="background:#EBF4FF"><div class="appt-val" style="color:#2563EB">${Math.round(st.sessions*1.3)}</div><div class="appt-lbl" style="color:#2563EB">TÃ« planifikuara</div></div>
-      <div class="appt-box" style="background:#F0FDF4"><div class="appt-val" style="color:#15803D">${st.sessions}</div><div class="appt-lbl" style="color:#15803D">TÃ« kryera</div></div>
-      <div class="appt-box" style="background:#FEF2F2"><div class="appt-val" style="color:#991B1B">${Math.round(st.sessions*0.07)}</div><div class="appt-lbl" style="color:#991B1B">TÃ« anuluara</div></div>
+      <div class="appt-box" style="background:#EBF4FF"><div class="appt-val" style="color:#2563EB">${Math.round(st.sessions*1.3)}</div><div class="appt-lbl" style="color:#2563EB">Të planifikuara</div></div>
+      <div class="appt-box" style="background:#F0FDF4"><div class="appt-val" style="color:#15803D">${st.sessions}</div><div class="appt-lbl" style="color:#15803D">Të kryera</div></div>
+      <div class="appt-box" style="background:#FEF2F2"><div class="appt-val" style="color:#991B1B">${Math.round(st.sessions*0.07)}</div><div class="appt-lbl" style="color:#991B1B">Të anuluara</div></div>
       <div class="appt-box" style="background:#FFFBEB"><div class="appt-val" style="color:#92400E">${st.attendance}%</div><div class="appt-lbl" style="color:#92400E">Prezenca</div></div>
     </div>
   </div>
@@ -1762,7 +1762,7 @@ const ReportsPage = ({ clinics }) => {
   <div class="footer">
     <div class="footer-left">
       <div class="f-main">${clinic.name} Â· ${clinic.city}</div>
-      <div class="f-sub">Raport gjeneruar nga Fizioapp â€” 01 Prill 2026 nÃ« 14:32 Â· Ref: RPT-${clinic.id}-2026-04</div>
+      <div class="f-sub">Raport gjeneruar nga Fizioapp â€” 01 Prill 2026 në 14:32 Â· Ref: RPT-${clinic.id}-2026-04</div>
     </div>
     <div class="footer-right">
       <div class="page-num">Faqe 1 / 1</div>
@@ -1782,13 +1782,13 @@ const ReportsPage = ({ clinics }) => {
       <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:24}}>
         <div>
           <h1 style={{fontSize:22,fontWeight:700,color:"#1A2332",margin:0}}>Raportet & Statistikat</h1>
-          <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>Zgjidh ordinancÃ«n dhe printo raportin</p>
+          <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>Zgjidh ordinancën dhe printo raportin</p>
         </div>
       </div>
 
       {/* Clinic selector for print */}
       <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:20,marginBottom:20}}>
-        <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:14}}>Printo Raport A4 â€” Zgjidh OrdinancÃ«n</div>
+        <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:14}}>Printo Raport A4 â€” Zgjidh Ordinancën</div>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(200px,1fr))",gap:10,marginBottom:16}}>
           {clinics.map(c=>(
             <div key={c.id} onClick={()=>setSelectedClinic(c)}
@@ -1832,7 +1832,7 @@ const ReportsPage = ({ clinics }) => {
               <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>{selectedClinic.name}</div>
               <div style={{fontSize:11,color:"#5A6A7E"}}>{selectedClinic.city} Â· {selectedClinic.phone||"â€”"} Â· {selectedClinic.address||"â€”"}</div>
               <div style={{fontSize:10,color:"#9DABBE",marginTop:1}}>
-                {selectedClinic.logo ? "âœ“ Logo e ngarkuar â€” do shfaqet nÃ« raport" : "âš  Pa logo â€” do pÃ«rdoret shkronjat fillestare"}
+                {selectedClinic.logo ? "âœ“ Logo e ngarkuar â€” do shfaqet në raport" : "âš  Pa logo â€” do përdoret shkronjat fillestare"}
               </div>
             </div>
             <button onClick={()=>handlePrint(selectedClinic)}
@@ -1844,15 +1844,15 @@ const ReportsPage = ({ clinics }) => {
       </div>
 
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14,marginBottom:20}}>
-        <StatCard icon="patients" label="PacientÃ« Total" value={clinics.reduce((s,c)=>s+c.patients,0)} change="+18% ky vit" changeUp accent="blue"/>
-        <StatCard icon="calendar" label="Seanca Total" value="847" change="+245 vs viti parÃ«" changeUp accent="green"/>
-        <StatCard icon="payments" label="TÃ« Ardhura YTD" value={`â‚¬${clinics.reduce((s,c)=>s+c.revenue,0).toLocaleString()}`} change="+22.4%" changeUp accent="amber"/>
+        <StatCard icon="patients" label="Pacientë Total" value={clinics.reduce((s,c)=>s+c.patients,0)} change="+18% ky vit" changeUp accent="blue"/>
+        <StatCard icon="calendar" label="Seanca Total" value="847" change="+245 vs viti parë" changeUp accent="green"/>
+        <StatCard icon="payments" label="Të Ardhura YTD" value={`â‚¬${clinics.reduce((s,c)=>s+c.revenue,0).toLocaleString()}`} change="+22.4%" changeUp accent="amber"/>
         <StatCard icon="activity" label="Prezenca Mesatare" value="94%" change="+2.1%" changeUp accent="green"/>
       </div>
 
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16,marginBottom:16}}>
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:20}}>
-          <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:16}}>TÃ« Ardhurat Mujore â€” 2026</div>
+          <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:16}}>Të Ardhurat Mujore â€” 2026</div>
           <div style={{display:"flex",alignItems:"flex-end",gap:8,height:120}}>
             {months.map((m,i)=>(
               <div key={m} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:4}}>
@@ -1868,7 +1868,7 @@ const ReportsPage = ({ clinics }) => {
           </div>
         </div>
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:20}}>
-          <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:16}}>PacientÃ« tÃ« Rinj â€” 2026</div>
+          <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:16}}>Pacientë të Rinj â€” 2026</div>
           <div style={{display:"flex",alignItems:"flex-end",gap:8,height:120}}>
             {months.map((m,i)=>(
               <div key={m} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:4}}>
@@ -1883,7 +1883,7 @@ const ReportsPage = ({ clinics }) => {
       <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
         <div style={{padding:"14px 18px",borderBottom:"1px solid #E8ECF2",fontSize:13,fontWeight:600,color:"#1A2332"}}>Performanca e Stafit</div>
         <div style={{display:"grid",gridTemplateColumns:"1.5fr 1fr 1fr 1fr 1fr",padding:"10px 18px",borderBottom:"1px solid #E8ECF2",fontSize:11,fontWeight:700,color:"#9DABBE",textTransform:"uppercase",letterSpacing:".06em"}}>
-          <span>Fizioterapis</span><span>Seanca</span><span>PacientÃ«</span><span>Prezenca</span><span>VlerÃ«simi</span>
+          <span>Fizioterapis</span><span>Seanca</span><span>Pacientë</span><span>Prezenca</span><span>Vlerësimi</span>
         </div>
         {STAFF.map(s=>(
           <div key={s.name} style={{display:"grid",gridTemplateColumns:"1.5fr 1fr 1fr 1fr 1fr",padding:"14px 18px",borderBottom:"1px solid #F5F7FA",alignItems:"center"}}
@@ -1930,19 +1930,19 @@ export default function FizioApp() {
     {id:"dashboard",label:"Dashboard",icon:"dashboard"},
     {id:"clinics",label:"Ordinancat",icon:"clinics"},
     {id:"staff",label:"Stafi Global",icon:"staff"},
-    {id:"settings",label:"CilÃ«simet",icon:"settings"},
+    {id:"settings",label:"Cilësimet",icon:"settings"},
   ];
 
   // Admin/Fizioterapis nav â€” full clinical access
   const clinicNav=[
     {id:"dashboard",label:"Dashboard",icon:"dashboard",roles:["admin","fizioterapis"]},
-    {id:"patients",label:"PacientÃ«t",icon:"patients",badge:124,roles:["admin","fizioterapis"]},
+    {id:"patients",label:"Pacientët",icon:"patients",badge:124,roles:["admin","fizioterapis"]},
     {id:"appointments",label:"Terminet",icon:"calendar",badge:8,roles:["admin","fizioterapis"]},
     {id:"treatments",label:"Trajtimet",icon:"treatments",roles:["admin","fizioterapis"]},
     {id:"payments",label:"Pagesat",icon:"payments",roles:["admin"]},
     {id:"reports",label:"Raportet",icon:"reports",roles:["admin"]},
     {id:"staff",label:"Stafi",icon:"staff",roles:["admin"]},
-    {id:"settings",label:"CilÃ«simet",icon:"settings",roles:["admin","fizioterapis"]},
+    {id:"settings",label:"Cilësimet",icon:"settings",roles:["admin","fizioterapis"]},
   ];
 
   // Show PIN login first (for admins), then normal login for superadmin
@@ -1953,7 +1953,7 @@ export default function FizioApp() {
 
   const isSuperadmin=user.role==="superadmin";
   const visibleNav=isSuperadmin ? superadminNav : clinicNav.filter(n=>n.roles.includes(user.role));
-  const roleLabel={superadmin:"Superadmin",admin:"Admin OrdinancÃ«s",fizioterapis:"Fizioterapis"}[user.role];
+  const roleLabel={superadmin:"Superadmin",admin:"Admin Ordinancës",fizioterapis:"Fizioterapis"}[user.role];
   const userClinic=!isSuperadmin ? clinics.find(c=>c.id===user.clinicId) : null;
 
   const handleNavigate=(pg,patient=null)=>{
@@ -1963,14 +1963,14 @@ export default function FizioApp() {
 
   // â”€â”€ TREATMENTS PAGE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   const TreatmentsPage = () => {
-    const TREATMENT_TYPES = ["Fizioterapi","Rehabilitim","Masazh terapeutik","Elektroterapi","Ultrasonik","Termokompresa","AkupunkturÃ«","Kineziterapi","Hidroterapi","Lazer terapi"];
+    const TREATMENT_TYPES = ["Fizioterapi","Rehabilitim","Masazh terapeutik","Elektroterapi","Ultrasonik","Termokompresa","Akupunkturë","Kineziterapi","Hidroterapi","Lazer terapi"];
     const initPlans = [
-      {id:1,patient:"Arjeta Krasniqi",type:"Fizioterapi",therapist:"Dr. Arta Morina",startDate:"01 Mar 2026",endDate:"30 Apr 2026",sessions:10,done:4,status:"active",price:65,notes:"Dhimbje e poshtme, progresi i mirÃ«",exercises:["Shtirje lumbare","Forcim barkut","Ushtrim posture"]},
-      {id:2,patient:"Besnik Morina",type:"Rehabilitim",therapist:"Dr. Blendi Berisha",startDate:"10 Feb 2026",endDate:"10 May 2026",sessions:12,done:7,status:"active",price:80,notes:"Pas operacionit tÃ« gjurit, rekuperim i mirÃ«",exercises:["Fleksion gjuri","Forcim kuadricepsit","ShÃ«titje e kontrolluar"]},
-      {id:3,patient:"Mimoza Berisha",type:"Masazh terapeutik",therapist:"Dr. Arta Morina",startDate:"15 Mar 2026",endDate:"15 Apr 2026",sessions:8,done:2,status:"active",price:55,notes:"Tension muskulor i qafÃ«s dhe shpatullave",exercises:["Rrotullim qafe","Shtirje shpatullash","LÃ«vizje kokÃ«"]},
-      {id:4,patient:"Driton Hoxha",type:"Elektroterapi",therapist:"Dr. Fjolla Gashi",startDate:"01 Jan 2026",endDate:"31 Mar 2026",sessions:15,done:9,status:"active",price:75,notes:"Artrit kronik, efikasitet i lartÃ« me TENS",exercises:["TENS 20 min","Ngrohje e butÃ«","LÃ«vizje pasive"]},
-      {id:5,patient:"Shpresa Aliu",type:"Kineziterapi",therapist:"Dr. Kushtrim Leka",startDate:"01 Dec 2025",endDate:"01 Mar 2026",sessions:16,done:16,status:"completed",price:70,notes:"Plani i kompletuar me sukses",exercises:["Program i plotÃ« kinez."]},
-      {id:6,patient:"Liridon Gashi",type:"Hidroterapi",therapist:"Dr. Blendi Berisha",startDate:"01 Apr 2026",endDate:"30 May 2026",sessions:10,done:1,status:"active",price:90,notes:"Hernia diskale L4-L5, fillim i hershÃ«m",exercises:["Ushtrime nÃ« ujÃ«","Flotim i kontrolluar","Shtirje nÃ« ujÃ«"]},
+      {id:1,patient:"Arjeta Krasniqi",type:"Fizioterapi",therapist:"Dr. Arta Morina",startDate:"01 Mar 2026",endDate:"30 Apr 2026",sessions:10,done:4,status:"active",price:65,notes:"Dhimbje e poshtme, progresi i mirë",exercises:["Shtirje lumbare","Forcim barkut","Ushtrim posture"]},
+      {id:2,patient:"Besnik Morina",type:"Rehabilitim",therapist:"Dr. Blendi Berisha",startDate:"10 Feb 2026",endDate:"10 May 2026",sessions:12,done:7,status:"active",price:80,notes:"Pas operacionit të gjurit, rekuperim i mirë",exercises:["Fleksion gjuri","Forcim kuadricepsit","Shëtitje e kontrolluar"]},
+      {id:3,patient:"Mimoza Berisha",type:"Masazh terapeutik",therapist:"Dr. Arta Morina",startDate:"15 Mar 2026",endDate:"15 Apr 2026",sessions:8,done:2,status:"active",price:55,notes:"Tension muskulor i qafës dhe shpatullave",exercises:["Rrotullim qafe","Shtirje shpatullash","Lëvizje kokë"]},
+      {id:4,patient:"Driton Hoxha",type:"Elektroterapi",therapist:"Dr. Fjolla Gashi",startDate:"01 Jan 2026",endDate:"31 Mar 2026",sessions:15,done:9,status:"active",price:75,notes:"Artrit kronik, efikasitet i lartë me TENS",exercises:["TENS 20 min","Ngrohje e butë","Lëvizje pasive"]},
+      {id:5,patient:"Shpresa Aliu",type:"Kineziterapi",therapist:"Dr. Kushtrim Leka",startDate:"01 Dec 2025",endDate:"01 Mar 2026",sessions:16,done:16,status:"completed",price:70,notes:"Plani i kompletuar me sukses",exercises:["Program i plotë kinez."]},
+      {id:6,patient:"Liridon Gashi",type:"Hidroterapi",therapist:"Dr. Blendi Berisha",startDate:"01 Apr 2026",endDate:"30 May 2026",sessions:10,done:1,status:"active",price:90,notes:"Hernia diskale L4-L5, fillim i hershëm",exercises:["Ushtrime në ujë","Flotim i kontrolluar","Shtirje në ujë"]},
     ];
     const [plans,setPlans]=useState(initPlans);
     const [view,setView]=useState("list"); // list | detail | new
@@ -1997,12 +1997,12 @@ export default function FizioApp() {
     };
 
     const saveSOAP=()=>{
-      showToast("âœ“ ShÃ«nimet SOAP u ruajtÃ«n!");
+      showToast("âœ“ Shënimet SOAP u ruajtën!");
       setShowSOAP(false);setSoap({s:"",o:"",a:"",p:""});
     };
 
     const submitNewPlan=()=>{
-      if(!newPlan.patient||!newPlan.therapist){showToast("âš  PlotÃ«so fushat e detyrueshme!");return;}
+      if(!newPlan.patient||!newPlan.therapist){showToast("âš  Plotëso fushat e detyrueshme!");return;}
       const plan={
         id:Date.now(),patient:newPlan.patient,type:newPlan.type,therapist:newPlan.therapist,
         startDate:newPlan.startDate||"01 Apr 2026",endDate:"",sessions:parseInt(newPlan.sessions)||10,
@@ -2030,7 +2030,7 @@ export default function FizioApp() {
               {[
                 {l:"Pacienti *",k:"patient",ph:"Emri i pacientit"},
                 {l:"Fizioterapis *",k:"therapist",ph:"Dr. Emri Mbiemri"},
-                {l:"Ã‡mimi pÃ«r seancÃ« (â‚¬)",k:"price",ph:"65",t:"number"},
+                {l:"Ã‡mimi për seancë (â‚¬)",k:"price",ph:"65",t:"number"},
                 {l:"Numri i seancave",k:"sessions",ph:"10",t:"number"},
                 {l:"Data e fillimit",k:"startDate",ph:"",t:"date"},
               ].map(f=>(
@@ -2048,8 +2048,8 @@ export default function FizioApp() {
               </div>
             </div>
             <div style={{marginTop:16}}>
-              <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>ShÃ«nime klinike</label>
-              <textarea value={newPlan.notes} onChange={e=>inp("notes",e.target.value)} placeholder="Diagnoza, qÃ«llimi i trajtimit, vÃ«rejtje..."
+              <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>Shënime klinike</label>
+              <textarea value={newPlan.notes} onChange={e=>inp("notes",e.target.value)} placeholder="Diagnoza, qëllimi i trajtimit, vërejtje..."
                 style={{...inputStyle,height:90,resize:"vertical"}}/>
             </div>
             <div style={{display:"flex",gap:10,marginTop:20}}>
@@ -2085,7 +2085,7 @@ export default function FizioApp() {
             <h1 style={{fontSize:20,fontWeight:700,color:"#1A2332",margin:0,flex:1}}>Plani i Trajtimit</h1>
             <button onClick={()=>addSession(p.id)} disabled={p.done>=p.sessions}
               style={{padding:"9px 18px",background:p.done>=p.sessions?"#E8ECF2":"linear-gradient(135deg,#22C55E,#16A34A)",color:p.done>=p.sessions?"#9DABBE":"#fff",border:"none",borderRadius:9,fontSize:13,fontWeight:600,cursor:p.done>=p.sessions?"not-allowed":"pointer",fontFamily:"'DM Sans',sans-serif"}}>
-              + Regjistro SeancÃ«
+              + Regjistro Seancë
             </button>
             <button onClick={()=>setShowSOAP(true)} style={{padding:"9px 18px",background:"#EBF4FF",color:"#2563EB",border:"1px solid #BFDBFE",borderRadius:9,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>
               ðŸ“‹ SOAP Note
@@ -2095,14 +2095,14 @@ export default function FizioApp() {
           {showSOAP&&(
             <div style={{background:"#fff",border:"2px solid #BFDBFE",borderRadius:14,padding:24,marginBottom:20}}>
               <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:16}}>
-                <span style={{fontSize:14,fontWeight:600,color:"#1A2332"}}>ShÃ«nim SOAP i Ri â€” {p.patient}</span>
+                <span style={{fontSize:14,fontWeight:600,color:"#1A2332"}}>Shënim SOAP i Ri â€” {p.patient}</span>
                 <button onClick={()=>setShowSOAP(false)} style={{border:"none",background:"none",cursor:"pointer",fontSize:18,color:"#9DABBE"}}>Ã—</button>
               </div>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14}}>
-                {[{k:"s",l:"S â€” Subjektive",ph:"Ã‡farÃ« raporton pacienti? Dhimbje, simptoma..."},
-                  {k:"o",l:"O â€” Objektive",ph:"Gjetjet fizike, matjet, vÃ«zhgimet..."},
-                  {k:"a",l:"A â€” VlerÃ«simi",ph:"Diagnoza, progresi, interpretimi..."},
-                  {k:"p",l:"P â€” Plani",ph:"Trajtimi i radhÃ«s, ushtrimet, rekomandimet..."}].map(f=>(
+                {[{k:"s",l:"S â€” Subjektive",ph:"Ã‡farë raporton pacienti? Dhimbje, simptoma..."},
+                  {k:"o",l:"O â€” Objektive",ph:"Gjetjet fizike, matjet, vëzhgimet..."},
+                  {k:"a",l:"A â€” Vlerësimi",ph:"Diagnoza, progresi, interpretimi..."},
+                  {k:"p",l:"P â€” Plani",ph:"Trajtimi i radhës, ushtrimet, rekomandimet..."}].map(f=>(
                   <div key={f.k}>
                     <label style={{fontSize:11,fontWeight:700,color:"#2563EB",display:"block",marginBottom:6,letterSpacing:".04em"}}>{f.l}</label>
                     <textarea value={soap[f.k]} onChange={e=>setSoap(pr=>({...pr,[f.k]:e.target.value}))} placeholder={f.ph}
@@ -2158,11 +2158,11 @@ export default function FizioApp() {
                     <span style={{fontSize:12,color:"#1A2332"}}>{ex}</span>
                   </div>
                 ))}
-                {p.exercises.length===0&&<div style={{fontSize:12,color:"#9DABBE"}}>Nuk ka ushtrime tÃ« caktuara</div>}
+                {p.exercises.length===0&&<div style={{fontSize:12,color:"#9DABBE"}}>Nuk ka ushtrime të caktuara</div>}
               </div>
             </div>
             <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:20}}>
-              <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:4}}>ShÃ«nime Klinike</div>
+              <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:4}}>Shënime Klinike</div>
               <div style={{fontSize:12,color:"#5A6A7E",marginBottom:16}}>{p.notes}</div>
               <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:12}}>Historia e Seancave</div>
               {Array.from({length:p.done},(_, i)=>{
@@ -2182,7 +2182,7 @@ export default function FizioApp() {
                   </div>
                 );
               })}
-              {p.done===0&&<div style={{padding:30,textAlign:"center",color:"#9DABBE",fontSize:13}}>Nuk ka seanca tÃ« regjistruara akoma.</div>}
+              {p.done===0&&<div style={{padding:30,textAlign:"center",color:"#9DABBE",fontSize:13}}>Nuk ka seanca të regjistruara akoma.</div>}
             </div>
           </div>
         </div>
@@ -2205,9 +2205,9 @@ export default function FizioApp() {
 
         <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14,marginBottom:20}}>
           {[{l:"Plane Aktive",v:plans.filter(p=>p.status==="active").length,a:"blue",i:"treatments"},
-            {l:"TÃ« Kompletuara",v:plans.filter(p=>p.status==="completed").length,a:"green",i:"check"},
+            {l:"Të Kompletuara",v:plans.filter(p=>p.status==="completed").length,a:"green",i:"check"},
             {l:"Seanca Totale",v:plans.reduce((s,p)=>s+p.done,0),a:"amber",i:"calendar"},
-            {l:"TÃ« Ardhura",v:`â‚¬${plans.reduce((s,p)=>s+p.done*p.price,0).toLocaleString()}`,a:"green",i:"payments"}].map(x=>(
+            {l:"Të Ardhura",v:`â‚¬${plans.reduce((s,p)=>s+p.done*p.price,0).toLocaleString()}`,a:"green",i:"payments"}].map(x=>(
             <div key={x.l} style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:"18px 20px"}}>
               <div style={{width:36,height:36,borderRadius:10,background:x.a==="blue"?"#EBF4FF":x.a==="green"?"#F0FDF4":"#FFFBEB",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:12}}>
                 <Icon name={x.i} size={18} color={x.a==="blue"?"#2563EB":x.a==="green"?"#22C55E":"#F59E0B"}/>
@@ -2219,7 +2219,7 @@ export default function FizioApp() {
         </div>
 
         <div style={{display:"flex",gap:8,marginBottom:16}}>
-          {[{k:"all",l:"TÃ« gjitha"},{k:"active",l:"Aktive"},{k:"completed",l:"TÃ« kompletuara"}].map(f=>(
+          {[{k:"all",l:"Të gjitha"},{k:"active",l:"Aktive"},{k:"completed",l:"Të kompletuara"}].map(f=>(
             <button key={f.k} onClick={()=>setFilterStatus(f.k)} style={{padding:"8px 16px",border:"1px solid",borderColor:filterStatus===f.k?"#2563EB":"#E8ECF2",borderRadius:9,background:filterStatus===f.k?"#EBF4FF":"#fff",color:filterStatus===f.k?"#2563EB":"#5A6A7E",fontSize:12,fontWeight:500,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>{f.l}</button>
           ))}
         </div>
@@ -2247,7 +2247,7 @@ export default function FizioApp() {
                 <div style={{padding:"14px 18px"}}>
                   <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:12}}>
                     <div style={{padding:"3px 10px",background:"#F1F3F7",borderRadius:20,fontSize:11,fontWeight:500,color:"#5A6A7E"}}>{p.type}</div>
-                    <div style={{fontSize:11,color:"#9DABBE"}}>â‚¬{p.price}/seancÃ«</div>
+                    <div style={{fontSize:11,color:"#9DABBE"}}>â‚¬{p.price}/seancë</div>
                   </div>
                   <div style={{display:"flex",justifyContent:"space-between",marginBottom:6}}>
                     <span style={{fontSize:12,color:"#5A6A7E"}}>Progresi</span>
@@ -2273,7 +2273,7 @@ export default function FizioApp() {
   const SettingsPage = () => {
     const [activeTab,setActiveTab]=useState("profile");
     const [profile,setProfile]=useState({name:"Urimi Admin",email:"urimi@fizioapp.com",phone:"044 111 222",role:"Superadmin",clinic:"RehabPro Gjilan",language:"Shqip",timezone:"UTC+1"});
-    const [clinic,setClinic]=useState({name:"RehabPro Gjilan",city:"Gjilan",address:"Rr. DÃ«shmorÃ«t e Kombit 8",phone:"0280 300 400",email:"gjilan@rehabpro.com",website:"www.rehabpro.com",taxId:"811234567"});
+    const [clinic,setClinic]=useState({name:"RehabPro Gjilan",city:"Gjilan",address:"Rr. Dëshmorët e Kombit 8",phone:"0280 300 400",email:"gjilan@rehabpro.com",website:"www.rehabpro.com",taxId:"811234567"});
     const [notif,setNotif]=useState({emailAppt:true,smsAppt:true,emailPayment:true,smsPayment:false,reminderHours:24,emailReports:true,systemAlerts:true});
     const [security,setSecurity]=useState({currentPw:"",newPw:"",confirmPw:""});
     const [prices,setPrices]=useState([
@@ -2297,7 +2297,7 @@ export default function FizioApp() {
 
     const inputStyle={width:"100%",padding:"10px 13px",border:"1.5px solid #E8ECF2",borderRadius:9,fontSize:13,outline:"none",fontFamily:"'DM Sans',sans-serif",color:"#1A2332",boxSizing:"border-box",background:"#fff"};
     const saveBtn=(label,action)=>(
-      <button onClick={()=>{action&&action();showToast("âœ“ Ndryshimet u ruajtÃ«n!");}}
+      <button onClick={()=>{action&&action();showToast("âœ“ Ndryshimet u ruajtën!");}}
         style={{padding:"10px 24px",background:"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:9,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>
         {label||"Ruaj Ndryshimet"}
       </button>
@@ -2314,8 +2314,8 @@ export default function FizioApp() {
       <div>
         {toast&&<div style={{position:"fixed",top:24,right:24,background:"#1A2332",color:"#fff",padding:"12px 20px",borderRadius:10,fontSize:13,fontWeight:500,zIndex:9999,boxShadow:"0 4px 20px rgba(0,0,0,.2)"}}>{toast}</div>}
         <div style={{marginBottom:24}}>
-          <h1 style={{fontSize:22,fontWeight:700,color:"#1A2332",margin:0}}>CilÃ«simet</h1>
-          <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>Menaxho profilin, ordinancÃ«n dhe preferencat</p>
+          <h1 style={{fontSize:22,fontWeight:700,color:"#1A2332",margin:0}}>Cilësimet</h1>
+          <p style={{fontSize:13,color:"#5A6A7E",marginTop:4}}>Menaxho profilin, ordinancën dhe preferencat</p>
         </div>
 
         <div style={{display:"grid",gridTemplateColumns:"220px 1fr",gap:20,alignItems:"start"}}>
@@ -2354,7 +2354,7 @@ export default function FizioApp() {
                   </button>
                 </div>
                 <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16,marginBottom:20}}>
-                  {[{l:"Emri i plotÃ«",k:"name"},{l:"Email",k:"email"},{l:"Telefon",k:"phone"},{l:"Gjuha",k:"language",type:"select",opts:["Shqip","English","Deutsch"]}].map(f=>(
+                  {[{l:"Emri i plotë",k:"name"},{l:"Email",k:"email"},{l:"Telefon",k:"phone"},{l:"Gjuha",k:"language",type:"select",opts:["Shqip","English","Deutsch"]}].map(f=>(
                     <div key={f.k}>
                       <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>{f.l}</label>
                       {f.type==="select"?(
@@ -2375,10 +2375,10 @@ export default function FizioApp() {
             {/* CLINIC */}
             {activeTab==="clinic"&&(
               <div>
-                <div style={{fontSize:16,fontWeight:700,color:"#1A2332",marginBottom:6}}>Informacionet e OrdinancÃ«s</div>
-                <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Detajet zyrtare tÃ« ordinancÃ«s suaj</div>
+                <div style={{fontSize:16,fontWeight:700,color:"#1A2332",marginBottom:6}}>Informacionet e Ordinancës</div>
+                <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Detajet zyrtare të ordinancës suaj</div>
                 <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16,marginBottom:20}}>
-                  {[{l:"Emri i OrdinancÃ«s",k:"name"},{l:"Qyteti",k:"city"},{l:"Telefon",k:"phone"},{l:"Email zyrtar",k:"email"},{l:"Faqja web",k:"website"},{l:"NUI/NIPT",k:"taxId"}].map(f=>(
+                  {[{l:"Emri i Ordinancës",k:"name"},{l:"Qyteti",k:"city"},{l:"Telefon",k:"phone"},{l:"Email zyrtar",k:"email"},{l:"Faqja web",k:"website"},{l:"NUI/NIPT",k:"taxId"}].map(f=>(
                     <div key={f.k}>
                       <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>{f.l}</label>
                       <input value={clinic[f.k]} onChange={e=>inpC(f.k,e.target.value)} style={inputStyle}
@@ -2387,7 +2387,7 @@ export default function FizioApp() {
                   ))}
                 </div>
                 <div style={{marginBottom:20}}>
-                  <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>Adresa e plotÃ«</label>
+                  <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>Adresa e plotë</label>
                   <input value={clinic.address} onChange={e=>inpC("address",e.target.value)} style={inputStyle}
                     onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
                 </div>
@@ -2398,20 +2398,20 @@ export default function FizioApp() {
             {/* NOTIFICATIONS */}
             {activeTab==="notifications"&&(
               <div>
-                <div style={{fontSize:16,fontWeight:700,color:"#1A2332",marginBottom:6}}>CilÃ«simet e Njoftimeve</div>
-                <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Kontrollo si dhe kur tÃ« njoftohet stafi dhe pacientÃ«t</div>
+                <div style={{fontSize:16,fontWeight:700,color:"#1A2332",marginBottom:6}}>Cilësimet e Njoftimeve</div>
+                <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Kontrollo si dhe kur të njoftohet stafi dhe pacientët</div>
                 {[
                   {section:"Terminet",items:[
-                    {k:"emailAppt",l:"Email pÃ«r termine tÃ« reja",d:"Merr email kur caktohet termin i ri"},
-                    {k:"smsAppt",l:"SMS pÃ«r termine",d:"DÃ«rgo SMS konfirmimi pacientÃ«ve"},
+                    {k:"emailAppt",l:"Email për termine të reja",d:"Merr email kur caktohet termin i ri"},
+                    {k:"smsAppt",l:"SMS për termine",d:"Dërgo SMS konfirmimi pacientëve"},
                   ]},
                   {section:"Pagesat",items:[
-                    {k:"emailPayment",l:"Email pÃ«r pagesa",d:"Njoftim kur bÃ«het pagesa"},
-                    {k:"smsPayment",l:"SMS pÃ«r pagesa vonuara",d:"SMS automatik pÃ«r faturat e vonuara"},
+                    {k:"emailPayment",l:"Email për pagesa",d:"Njoftim kur bëhet pagesa"},
+                    {k:"smsPayment",l:"SMS për pagesa vonuara",d:"SMS automatik për faturat e vonuara"},
                   ]},
                   {section:"Sistemi",items:[
-                    {k:"emailReports",l:"Raport javor me email",d:"Merr raport tÃ« performancÃ«s Ã§do javÃ«"},
-                    {k:"systemAlerts",l:"Njoftimet e sistemit",d:"Alarme pÃ«r gabime dhe probleme teknike"},
+                    {k:"emailReports",l:"Raport javor me email",d:"Merr raport të performancës çdo javë"},
+                    {k:"systemAlerts",l:"Njoftimet e sistemit",d:"Alarme për gabime dhe probleme teknike"},
                   ]},
                 ].map(sec=>(
                   <div key={sec.section} style={{marginBottom:20}}>
@@ -2428,7 +2428,7 @@ export default function FizioApp() {
                   </div>
                 ))}
                 <div style={{marginBottom:20}}>
-                  <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:8}}>KohÃ« para terminit pÃ«r reminder (orÃ«)</label>
+                  <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:8}}>Kohë para terminit për reminder (orë)</label>
                   <div style={{display:"flex",gap:8}}>
                     {[1,2,12,24,48].map(h=>(
                       <button key={h} onClick={()=>inpN("reminderHours",h)}
@@ -2438,7 +2438,7 @@ export default function FizioApp() {
                     ))}
                   </div>
                 </div>
-                {saveBtn("Ruaj CilÃ«simet")}
+                {saveBtn("Ruaj Cilësimet")}
               </div>
             )}
 
@@ -2446,10 +2446,10 @@ export default function FizioApp() {
             {activeTab==="prices"&&(
               <div>
                 <div style={{fontSize:16,fontWeight:700,color:"#1A2332",marginBottom:6}}>Lista e Ã‡mimeve</div>
-                <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Cakto Ã§mimet dhe kohÃ«zgjatjen pÃ«r Ã§do shÃ«rbim</div>
+                <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Cakto çmimet dhe kohëzgjatjen për çdo shërbim</div>
                 <div style={{background:"#F8FAFF",borderRadius:12,overflow:"hidden",border:"1px solid #E8ECF2",marginBottom:20}}>
                   <div style={{display:"grid",gridTemplateColumns:"2fr 100px 90px 80px",padding:"10px 16px",borderBottom:"1px solid #E8ECF2",fontSize:11,fontWeight:700,color:"#9DABBE",textTransform:"uppercase",letterSpacing:".06em"}}>
-                    <span>ShÃ«rbimi</span><span>Ã‡mimi (â‚¬)</span><span>KohÃ«zgjatja</span><span>Aktiv</span>
+                    <span>Shërbimi</span><span>Ã‡mimi (â‚¬)</span><span>Kohëzgjatja</span><span>Aktiv</span>
                   </div>
                   {prices.map(p=>(
                     <div key={p.id} style={{display:"grid",gridTemplateColumns:"2fr 100px 90px 80px",padding:"12px 16px",borderBottom:"1px solid #F1F3F7",alignItems:"center",background:p.active?"transparent":"#FAFAFA"}}
@@ -2474,9 +2474,9 @@ export default function FizioApp() {
                 </div>
                 <div style={{display:"flex",gap:10}}>
                   {saveBtn("Ruaj Ã‡mimet")}
-                  <button onClick={()=>setPrices(prev=>[...prev,{id:Date.now(),service:"ShÃ«rbim i Ri",price:60,duration:45,active:true}])}
+                  <button onClick={()=>setPrices(prev=>[...prev,{id:Date.now(),service:"Shërbim i Ri",price:60,duration:45,active:true}])}
                     style={{padding:"10px 18px",border:"1px solid #E8ECF2",borderRadius:9,background:"#fff",fontSize:13,fontWeight:500,cursor:"pointer",color:"#5A6A7E",fontFamily:"'DM Sans',sans-serif"}}>
-                    + Shto ShÃ«rbim
+                    + Shto Shërbim
                   </button>
                 </div>
               </div>
@@ -2485,10 +2485,10 @@ export default function FizioApp() {
             {/* SECURITY */}
             {activeTab==="security"&&(
               <div>
-                <div style={{fontSize:16,fontWeight:700,color:"#1A2332",marginBottom:6}}>Siguria e LlogarisÃ«</div>
-                <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Ndrysho fjalÃ«kalimin dhe cilÃ«simet e sigurisÃ«</div>
+                <div style={{fontSize:16,fontWeight:700,color:"#1A2332",marginBottom:6}}>Siguria e Llogarisë</div>
+                <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Ndrysho fjalëkalimin dhe cilësimet e sigurisë</div>
                 <div style={{maxWidth:400}}>
-                  {[{l:"FjalÃ«kalimi aktual",k:"currentPw"},{l:"FjalÃ«kalimi i ri",k:"newPw"},{l:"Konfirmo fjalÃ«kalimin e ri",k:"confirmPw"}].map(f=>(
+                  {[{l:"Fjalëkalimi aktual",k:"currentPw"},{l:"Fjalëkalimi i ri",k:"newPw"},{l:"Konfirmo fjalëkalimin e ri",k:"confirmPw"}].map(f=>(
                     <div key={f.k} style={{marginBottom:16}}>
                       <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>{f.l}</label>
                       <input type="password" value={security[f.k]} onChange={e=>inpS(f.k,e.target.value)} style={inputStyle}
@@ -2497,15 +2497,15 @@ export default function FizioApp() {
                   ))}
                   {security.newPw&&security.confirmPw&&security.newPw!==security.confirmPw&&(
                     <div style={{padding:"10px 14px",background:"#FEF2F2",border:"1px solid #FECACA",borderRadius:9,fontSize:12,color:"#991B1B",marginBottom:16}}>
-                      âš  FjalÃ«kalimet nuk pÃ«rputhen
+                      âš  Fjalëkalimet nuk përputhen
                     </div>
                   )}
-                  {saveBtn("Ndrysho FjalÃ«kalimin")}
+                  {saveBtn("Ndrysho Fjalëkalimin")}
                 </div>
                 <div style={{marginTop:32,paddingTop:24,borderTop:"1px solid #E8ECF2"}}>
                   <div style={{fontSize:14,fontWeight:600,color:"#1A2332",marginBottom:6}}>Sesionet Aktive</div>
-                  <div style={{fontSize:13,color:"#5A6A7E",marginBottom:16}}>Pajisjet ku jeni tÃ« kyÃ§ur aktualisht</div>
-                  {[{d:"Windows 11 Â· Chrome",l:"Gjilan, KosovÃ«",t:"Aktiv tani",c:"#22C55E"},{d:"iPhone 14 Â· Safari",l:"PrishtinÃ«, KosovÃ«",t:"3 orÃ« mÃ« parÃ«",c:"#F59E0B"}].map((s,i)=>(
+                  <div style={{fontSize:13,color:"#5A6A7E",marginBottom:16}}>Pajisjet ku jeni të kyçur aktualisht</div>
+                  {[{d:"Windows 11 Â· Chrome",l:"Gjilan, Kosovë",t:"Aktiv tani",c:"#22C55E"},{d:"iPhone 14 Â· Safari",l:"Prishtinë, Kosovë",t:"3 orë më parë",c:"#F59E0B"}].map((s,i)=>(
                     <div key={i} style={{display:"flex",alignItems:"center",gap:12,padding:"12px 16px",background:"#F8FAFF",borderRadius:10,border:"1px solid #E8ECF2",marginBottom:8}}>
                       <div style={{width:36,height:36,borderRadius:9,background:"#EBF4FF",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18,flexShrink:0}}>
                         {i===0?"ðŸ’»":"ðŸ“±"}
@@ -2526,13 +2526,13 @@ export default function FizioApp() {
             {activeTab==="appearance"&&(
               <div>
                 <div style={{fontSize:16,fontWeight:700,color:"#1A2332",marginBottom:6}}>Pamja e Aplikacionit</div>
-                <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Personalizo pamjen dhe ndÃ«rfaqen</div>
+                <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Personalizo pamjen dhe ndërfaqen</div>
                 <div style={{marginBottom:24}}>
                   <div style={{fontSize:12,fontWeight:600,color:"#5A6A7E",marginBottom:12,textTransform:"uppercase",letterSpacing:".07em"}}>Tema</div>
                   <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:12}}>
-                    {[{k:"light",l:"E BardhÃ«",desc:"Minimalist & e pastÃ«r",preview:"#FAFAFA"},
+                    {[{k:"light",l:"E Bardhë",desc:"Minimalist & e pastër",preview:"#FAFAFA"},
                       {k:"blue",l:"Blu Profesionale",desc:"Kryesore aktuale",preview:"#EBF4FF"},
-                      {k:"dark",l:"E ErrÃ«t",desc:"Rehat nate",preview:"#1A2332"}].map(t=>(
+                      {k:"dark",l:"E Errët",desc:"Rehat nate",preview:"#1A2332"}].map(t=>(
                       <div key={t.k} style={{border:"2px solid",borderColor:t.k==="blue"?"#2563EB":"#E8ECF2",borderRadius:12,padding:16,cursor:"pointer",textAlign:"center",background:t.k==="blue"?"#EBF4FF":"#fff"}}>
                         <div style={{width:"100%",height:48,borderRadius:8,background:t.preview,border:"1px solid #E8ECF2",marginBottom:10}}/>
                         <div style={{fontSize:13,fontWeight:600,color:t.k==="blue"?"#2563EB":"#1A2332"}}>{t.l}</div>
@@ -2543,9 +2543,9 @@ export default function FizioApp() {
                   </div>
                 </div>
                 <div style={{marginBottom:24}}>
-                  <div style={{fontSize:12,fontWeight:600,color:"#5A6A7E",marginBottom:12,textTransform:"uppercase",letterSpacing:".07em"}}>MadhÃ«sia e shkronjave</div>
+                  <div style={{fontSize:12,fontWeight:600,color:"#5A6A7E",marginBottom:12,textTransform:"uppercase",letterSpacing:".07em"}}>Madhësia e shkronjave</div>
                   <div style={{display:"flex",gap:8}}>
-                    {["E vogÃ«l","Normale","E madhe"].map((s,i)=>(
+                    {["E vogël","Normale","E madhe"].map((s,i)=>(
                       <button key={s} style={{padding:"8px 20px",border:"1px solid",borderColor:i===1?"#2563EB":"#E8ECF2",borderRadius:9,background:i===1?"#EBF4FF":"#fff",color:i===1?"#2563EB":"#5A6A7E",fontSize:12+i,fontWeight:i===1?600:400,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>{s}</button>
                     ))}
                   </div>
@@ -2574,8 +2574,8 @@ export default function FizioApp() {
     return (
       <div style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",height:"50vh",color:"#9DABBE"}}>
         <div style={{fontSize:40,marginBottom:12}}>ðŸš§</div>
-        <div style={{fontSize:16,fontWeight:600,color:"#5A6A7E"}}>Duke u ndÃ«rtuar...</div>
-        <div style={{fontSize:13,marginTop:6}}>Ky seksion vjen sÃ« shpejti</div>
+        <div style={{fontSize:16,fontWeight:600,color:"#5A6A7E"}}>Duke u ndërtuar...</div>
+        <div style={{fontSize:13,marginTop:6}}>Ky seksion vjen së shpejti</div>
       </div>
     );
   };
@@ -2601,7 +2601,7 @@ export default function FizioApp() {
         {isSuperadmin&&(
           <div style={{margin:"10px 12px 0",padding:"8px 12px",background:"linear-gradient(135deg,#EBF4FF,#F0F7FF)",border:"1px solid #BFDBFE",borderRadius:10}}>
             <div style={{fontSize:10,fontWeight:700,color:"#2563EB",letterSpacing:".06em"}}>SUPERADMIN</div>
-            <div style={{fontSize:11,color:"#5A6A7E",marginTop:1}}>Kontroll i plotÃ« i sistemit</div>
+            <div style={{fontSize:11,color:"#5A6A7E",marginTop:1}}>Kontroll i plotë i sistemit</div>
           </div>
         )}
         {!isSuperadmin&&userClinic&&(
@@ -2643,7 +2643,7 @@ export default function FizioApp() {
             <Avatar name={user.name||( isSuperadmin?"Urimi Admin":user.role==="admin"?"Admin":"Fizioterapis")} size={34} bg="linear-gradient(135deg,#4A90D9,#2563EB)" color="#fff"/>
             <div style={{flex:1,minWidth:0}}>
               <div style={{fontSize:12,fontWeight:600,color:"#1A2332",whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>
-                {user.name||(isSuperadmin?"Urimi Admin":user.role==="admin"?"Admin KlinikÃ«s":"Fizioterapis")}
+                {user.name||(isSuperadmin?"Urimi Admin":user.role==="admin"?"Admin Klinikës":"Fizioterapis")}
               </div>
               <div style={{fontSize:11,color:"#9DABBE"}}>{roleLabel}</div>
             </div>
@@ -2671,7 +2671,7 @@ export default function FizioApp() {
             {!isSuperadmin&&(
               <button style={{display:"flex",alignItems:"center",gap:7,padding:"9px 16px",background:"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:9,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif"}}>
                 <Icon name="plus" size={14} color="#fff"/>
-                {page==="patients"?"Pacient i Ri":page==="appointments"?"Termin i Ri":"Shto tÃ« Re"}
+                {page==="patients"?"Pacient i Ri":page==="appointments"?"Termin i Ri":"Shto të Re"}
               </button>
             )}
           </div>

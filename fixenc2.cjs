@@ -1,0 +1,10 @@
+﻿const fs = require('fs');
+let t = fs.readFileSync('src/App.jsx','utf8');
+const r = (a,b)=>{ t=t.split(a).join(b); };
+r('\u00c3\u00ab','\u00eb'); r('\u00c3\u008b','\u00cb');
+r('\u00c3\u00a7','\u00e7'); r('\u00c3\u0087','\u00c7');
+r('\u00c3\u00ab','\u00eb');
+r('\u00e2\u0080\u0093','-'); r('\u00e2\u0080\u0094','-');
+r('\u00e2\u0086\u0092','\u2192'); r('\u00e2\u0082\u00ac','\u20ac');
+fs.writeFileSync('src/App.jsx',t,'utf8');
+console.log('OK');
