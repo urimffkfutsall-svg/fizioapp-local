@@ -400,7 +400,7 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
         {[{icon:"clinics",label:"Ordinanca Aktive",value:active.length,change:`${clinics.length} gjithsej`,up:true,a:"blue"},
           {icon:"patients",label:"Pacientë Total",value:totalPatients,change:"+23 muajin",up:true,a:"green"},
           {icon:"staff",label:"Përdorues Total",value:totalUsers,change:`${clinics.length} ordinanca`,up:true,a:"amber"},
-          {icon:"payments",label:"Të Ardhura Total",value:`â‚¬${totalRevenue.toLocaleString()}`,change:"+12.4%",up:true,a:"green"}].map(x=>(
+          {icon:"payments",label:"Të Ardhura Total",value:`€${totalRevenue.toLocaleString()}`,change:"+12.4%",up:true,a:"green"}].map(x=>(
           <div key={x.label} style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:"18px 20px"}}>
             <div style={{width:36,height:36,borderRadius:10,background:x.a==="blue"?"#EBF4FF":x.a==="green"?"#F0FDF4":"#FFFBEB",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:12}}>
               <Icon name={x.icon} size={18} color={x.a==="blue"?"#2563EB":x.a==="green"?"#22C55E":"#F59E0B"}/>
@@ -427,7 +427,7 @@ const SuperadminDashboard = ({ clinics, onDeleteClinic, onUpdateClinic }) => {
                 <div style={{fontSize:11,color:"#9DABBE"}}>{c.city} Â· {c.patients} pacientë Â· {c.users} përdorues</div>
               </div>
               <div style={{textAlign:"right"}}>
-                <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>â‚¬{c.revenue.toLocaleString()}</div>
+                <div style={{fontSize:13,fontWeight:600,color:"#1A2332"}}>€{c.revenue.toLocaleString()}</div>
                 <span style={{padding:"2px 8px",borderRadius:20,fontSize:10,fontWeight:600,background:c.status==="active"?"#F0FDF4":"#F5F5F5",color:c.status==="active"?"#15803D":"#9DABBE"}}>{c.status==="active"?"Aktive":"Joaktive"}</span>
               
   <div style={{display:"flex",gap:8,flexShrink:0,marginLeft:"auto"}}>
@@ -498,7 +498,7 @@ const Dashboard = ({ user }) => {
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14,marginBottom:20}}>
         <StatCard icon="patients" label="Pacientë Aktivë" value="124" change="+12 këtë muaj" changeUp accent="blue"/>
         <StatCard icon="calendar" label="Termine Sot" value={today.length} change="3 mbeten" changeUp accent="green"/>
-        <StatCard icon="payments" label="Të Ardhura Mujore" value="â‚¬3,240" change="+8.3%" changeUp accent="amber"/>
+        <StatCard icon="payments" label="Të Ardhura Mujore" value="€3,240" change="+8.3%" changeUp accent="amber"/>
         <StatCard icon="activity" label="Pa Konfirmim" value="3" change="Kërkon vëmendje" changeUp={false} accent="red"/>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"1fr 320px",gap:16,marginBottom:16}}>
@@ -567,10 +567,10 @@ const Dashboard = ({ user }) => {
           </div>
           <div style={{background:"linear-gradient(135deg,#2563EB,#4A90D9)",borderRadius:14,padding:"18px 16px",color:"white"}}>
             <div style={{fontSize:12,opacity:.8,marginBottom:4}}>Të ardhurat e muajit</div>
-            <div style={{fontSize:28,fontWeight:700,marginBottom:2}}>â‚¬3,240</div>
+            <div style={{fontSize:28,fontWeight:700,marginBottom:2}}>€3,240</div>
             <div style={{fontSize:12,opacity:.8,marginBottom:16}}>Prill 2026</div>
             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
-              {[{l:"Paguar",v:"â‚¬2,860"},{l:"Në pritje",v:"â‚¬380"},{l:"Fatura",v:"38"},{l:"Seanca",v:"142"}].map(x=>(
+              {[{l:"Paguar",v:"€2,860"},{l:"Në pritje",v:"€380"},{l:"Fatura",v:"38"},{l:"Seanca",v:"142"}].map(x=>(
                 <div key={x.l} style={{background:"rgba(255,255,255,.15)",borderRadius:8,padding:"8px 10px"}}>
                   <div style={{fontSize:11,opacity:.8}}>{x.l}</div>
                   <div style={{fontSize:15,fontWeight:700}}>{x.v}</div>
@@ -581,7 +581,7 @@ const Dashboard = ({ user }) => {
           <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
             <div style={{padding:"14px 16px",borderBottom:"1px solid #E8ECF2",fontSize:13,fontWeight:600,color:"#1A2332"}}>Aktiviteti</div>
             {[{icon:"check",bg:"#F0FDF4",ic:"#22C55E",text:"Arjeta kreu seancën 4-të",time:"2h"},
-              {icon:"payments",bg:"#EBF4FF",ic:"#2563EB",text:"Faturë paguar â‚¬65",time:"3h"},
+              {icon:"payments",bg:"#EBF4FF",ic:"#2563EB",text:"Faturë paguar €65",time:"3h"},
               {icon:"patients",bg:"#FFFBEB",ic:"#F59E0B",text:"Pacient i ri: Liridon Gashi",time:"5h"}].map((a,i)=>(
               <div key={i} style={{display:"flex",alignItems:"flex-start",gap:10,padding:"10px 16px",borderBottom:"1px solid #F5F7FA"}}>
                 <div style={{width:28,height:28,borderRadius:"50%",background:a.bg,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
@@ -629,7 +629,7 @@ const PatientsPage = ({ initialSelected=null }) => {
               <Badge status={p.status}/>
               <div style={{marginTop:16,padding:"12px 0",borderTop:"1px solid #E8ECF2"}}>
                 <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,textAlign:"left"}}>
-                  {[{l:"Mosha",v:p.age+" vj"},{l:"Datëlindja",v:p.dob},{l:"Telefon",v:p.phone},{l:"Adresa",v:p.address},{l:"Fizioterapis",v:p.therapist},{l:"Bilanci",v:`â‚¬${p.balance}`}].map(x=>(
+                  {[{l:"Mosha",v:p.age+" vj"},{l:"Datëlindja",v:p.dob},{l:"Telefon",v:p.phone},{l:"Adresa",v:p.address},{l:"Fizioterapis",v:p.therapist},{l:"Bilanci",v:`€${p.balance}`}].map(x=>(
                     <div key={x.l}><div style={{fontSize:10,color:"#9DABBE",fontWeight:600,textTransform:"uppercase"}}>{x.l}</div><div style={{fontSize:12,fontWeight:500,color:"#1A2332",marginTop:2}}>{x.v}</div></div>
                   ))}
                 </div>
@@ -873,10 +873,10 @@ const PaymentsPage = () => {
         </div>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14,marginBottom:20}}>
-        <StatCard icon="payments" label="Total Mujoror" value="â‚¬3,240" change="+8.3% vs muajit parë" changeUp accent="blue"/>
-        <StatCard icon="check" label="Paguar" value="â‚¬2,860" change="38 fatura" changeUp accent="green"/>
-        <StatCard icon="clock" label="Në Pritje" value="â‚¬380" change="3 fatura" changeUp={false} accent="amber"/>
-        <StatCard icon="x" label="Vonuara" value="â‚¬90" change="1 faturë" changeUp={false} accent="red"/>
+        <StatCard icon="payments" label="Total Mujoror" value="€3,240" change="+8.3% vs muajit parë" changeUp accent="blue"/>
+        <StatCard icon="check" label="Paguar" value="€2,860" change="38 fatura" changeUp accent="green"/>
+        <StatCard icon="clock" label="Në Pritje" value="€380" change="3 fatura" changeUp={false} accent="amber"/>
+        <StatCard icon="x" label="Vonuara" value="€90" change="1 faturë" changeUp={false} accent="red"/>
       </div>
       <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,overflow:"hidden"}}>
         <div style={{display:"flex",alignItems:"center",gap:4,padding:"12px 16px",borderBottom:"1px solid #E8ECF2",background:"#FAFBFD"}}>
@@ -899,7 +899,7 @@ const PaymentsPage = () => {
             </div>
             <span style={{fontSize:12,color:"#5A6A7E"}}>{inv.type}</span>
             <span style={{fontSize:12,color:"#5A6A7E"}}>{inv.date}</span>
-            <span style={{fontSize:14,fontWeight:700,color:"#1A2332"}}>â‚¬{inv.amount}</span>
+            <span style={{fontSize:14,fontWeight:700,color:"#1A2332"}}>€{inv.amount}</span>
             <Badge status={inv.status}/>
           </div>
         ))}
@@ -1342,7 +1342,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
           <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:18}}>
             <div style={{fontSize:13,fontWeight:600,color:"#1A2332",marginBottom:14}}>Statistika</div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:12}}>
-              {[{l:"Pacientë",v:selected.patients},{l:"Përdorues",v:selected.users},{l:"Të Ardhura",v:`â‚¬${(selected.revenue||0).toLocaleString()}`},{l:"Aktive nga",v:selected.since}].map(x=>(
+              {[{l:"Pacientë",v:selected.patients},{l:"Përdorues",v:selected.users},{l:"Të Ardhura",v:`€${(selected.revenue||0).toLocaleString()}`},{l:"Aktive nga",v:selected.since}].map(x=>(
                 <div key={x.l} style={{background:"#F8FAFF",borderRadius:10,padding:"12px 14px",textAlign:"center"}}>
                   <div style={{fontSize:18,fontWeight:700,color:"#1A2332"}}>{x.v}</div>
                   <div style={{fontSize:10,color:"#9DABBE",marginTop:3}}>{x.l}</div>
@@ -1446,7 +1446,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
         </div>
         <div style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:"18px 20px"}}>
           <div style={{width:36,height:36,borderRadius:10,background:"#F0FDF4",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:12}}><Icon name="payments" size={18} color="#22C55E"/></div>
-          <div style={{fontSize:26,fontWeight:700,color:"#1A2332"}}>â‚¬{clinics.reduce((s,c)=>s+c.revenue,0).toLocaleString()}</div>
+          <div style={{fontSize:26,fontWeight:700,color:"#1A2332"}}>€{clinics.reduce((s,c)=>s+c.revenue,0).toLocaleString()}</div>
           <div style={{fontSize:12,color:"#5A6A7E",marginTop:5}}>Të Ardhura Total</div>
         </div>
       </div>
@@ -1472,7 +1472,7 @@ const ClinicsPage = ({ clinics, setClinics }) => {
             </div>
             <div style={{padding:"14px 18px"}}>
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:10,marginBottom:12}}>
-                {[{l:"Pacientë",v:c.patients},{l:"Adminë PIN",v:(c.admins||[]).length},{l:"Të Ardhura",v:`â‚¬${c.revenue.toLocaleString()}`}].map(x=>(
+                {[{l:"Pacientë",v:c.patients},{l:"Adminë PIN",v:(c.admins||[]).length},{l:"Të Ardhura",v:`€${c.revenue.toLocaleString()}`}].map(x=>(
                   <div key={x.l}><div style={{fontSize:10,color:"#9DABBE",fontWeight:600,textTransform:"uppercase"}}>{x.l}</div><div style={{fontSize:13,fontWeight:700,color:"#1A2332",marginTop:2}}>{x.v}
   <div style={{display:"flex",gap:8,flexShrink:0,marginLeft:"auto"}}>
     <button onClick={() => openEdit(c)} style={{padding:"7px 10px",borderRadius:10,border:"1px solid #E8ECF2",background:"#fff",cursor:"pointer",fontSize:12,fontWeight:600}}>Edit</button>
@@ -1539,7 +1539,7 @@ const ReportsPage = ({ clinics }) => {
       const h=Math.round(v/Math.max(1800,2100,2800,st.revenue*0.9)*80);
       const cols=["#BFDBFE","#93C5FD","#60A5FA","#2563EB"];
       const ms=["Jan","Feb","Mar","Apr"];
-      return `<div class="bar-col"><div class="bar-val">â‚¬${v.toLocaleString()}</div><div class="bar-fill" style="height:${h}px;background:${cols[i]}"></div><div class="bar-month">${ms[i]}</div></div>`;
+      return `<div class="bar-col"><div class="bar-val">€${v.toLocaleString()}</div><div class="bar-fill" style="height:${h}px;background:${cols[i]}"></div><div class="bar-month">${ms[i]}</div></div>`;
     }).join("")+["Maj","Qer","Kor","Gus","Sht","Tet","Nën","Dhj"].map(m=>`<div class="bar-col"><div class="bar-fill" style="height:6px;background:#F1F3F7"></div><div class="bar-month">${m}</div></div>`).join("");
 
     const html=`<!DOCTYPE html>
@@ -1681,7 +1681,7 @@ const ReportsPage = ({ clinics }) => {
   <div class="kpi-grid">
     <div class="kpi"><div class="kpi-icon">ðŸ‘¥</div><div class="kpi-val">${st.patients}</div><div class="kpi-label">Pacientë Aktivë</div><div class="kpi-change">â†‘ +8 vs muajit parë</div></div>
     <div class="kpi"><div class="kpi-icon">ðŸ“…</div><div class="kpi-val">${st.sessions}</div><div class="kpi-label">Seanca Totale</div><div class="kpi-change">â†‘ +14 vs muajit parë</div></div>
-    <div class="kpi"><div class="kpi-icon">ðŸ’¶</div><div class="kpi-val">â‚¬${st.revenue.toLocaleString()}</div><div class="kpi-label">Të Ardhura</div><div class="kpi-change">â†‘ +8.3% rritje</div></div>
+    <div class="kpi"><div class="kpi-icon">ðŸ’¶</div><div class="kpi-val">€${st.revenue.toLocaleString()}</div><div class="kpi-label">Të Ardhura</div><div class="kpi-change">â†‘ +8.3% rritje</div></div>
     <div class="kpi"><div class="kpi-icon">âœ…</div><div class="kpi-val">${st.attendance}%</div><div class="kpi-label">Prezenca</div><div class="kpi-change">â†‘ +2.1% muajin</div></div>
   </div>
 
@@ -1689,10 +1689,10 @@ const ReportsPage = ({ clinics }) => {
   <div class="summary-box">
     <h3>Përmbledhja Financiare â€” Prill 2026</h3>
     <div class="summary-grid">
-      <div class="summary-item"><div class="s-val">â‚¬${st.paid.toLocaleString()}</div><div class="s-lbl">Pagesa të mbledhura</div></div>
-      <div class="summary-item"><div class="s-val">â‚¬${st.pending.toLocaleString()}</div><div class="s-lbl">Në pritje të pagesës</div></div>
+      <div class="summary-item"><div class="s-val">€${st.paid.toLocaleString()}</div><div class="s-lbl">Pagesa të mbledhura</div></div>
+      <div class="summary-item"><div class="s-val">€${st.pending.toLocaleString()}</div><div class="s-lbl">Në pritje të pagesës</div></div>
       <div class="summary-item"><div class="s-val">${st.invoices}</div><div class="s-lbl">Fatura të lëshuara</div></div>
-      <div class="summary-item"><div class="s-val">â‚¬${Math.round(st.revenue/Math.max(st.sessions,1))}</div><div class="s-lbl">Mesatarja për seancë</div></div>
+      <div class="summary-item"><div class="s-val">€${Math.round(st.revenue/Math.max(st.sessions,1))}</div><div class="s-lbl">Mesatarja për seancë</div></div>
       <div class="summary-item"><div class="s-val">${clinic.users}</div><div class="s-lbl">Stafi aktiv</div></div>
       <div class="summary-item"><div class="s-val">${Math.round(st.paid/st.revenue*100)||97}%</div><div class="s-lbl">Shkalla e mbledhjes</div></div>
     </div>
@@ -1729,7 +1729,7 @@ const ReportsPage = ({ clinics }) => {
           ${INVOICES.map(inv=>{
             const bc=inv.status==="paid"?"badge-green":inv.status==="overdue"?"badge-red":"badge-amber";
             const bl=inv.status==="paid"?"Paguar":inv.status==="overdue"?"Vonuar":"Pritje";
-            return `<tr><td><strong style="font-size:10px;color:#2563EB">${inv.id}</strong><br/><span style="font-size:9px;color:#9DABBE">${inv.patient}</span></td><td><strong>â‚¬${inv.amount}</strong></td><td><span class="badge ${bc}">${bl}</span></td></tr>`;
+            return `<tr><td><strong style="font-size:10px;color:#2563EB">${inv.id}</strong><br/><span style="font-size:9px;color:#9DABBE">${inv.patient}</span></td><td><strong>€${inv.amount}</strong></td><td><span class="badge ${bc}">${bl}</span></td></tr>`;
           }).join("")}
         </tbody>
       </table>
@@ -1846,7 +1846,7 @@ const ReportsPage = ({ clinics }) => {
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14,marginBottom:20}}>
         <StatCard icon="patients" label="Pacientë Total" value={clinics.reduce((s,c)=>s+c.patients,0)} change="+18% ky vit" changeUp accent="blue"/>
         <StatCard icon="calendar" label="Seanca Total" value="847" change="+245 vs viti parë" changeUp accent="green"/>
-        <StatCard icon="payments" label="Të Ardhura YTD" value={`â‚¬${clinics.reduce((s,c)=>s+c.revenue,0).toLocaleString()}`} change="+22.4%" changeUp accent="amber"/>
+        <StatCard icon="payments" label="Të Ardhura YTD" value={`€${clinics.reduce((s,c)=>s+c.revenue,0).toLocaleString()}`} change="+22.4%" changeUp accent="amber"/>
         <StatCard icon="activity" label="Prezenca Mesatare" value="94%" change="+2.1%" changeUp accent="green"/>
       </div>
 
@@ -2030,7 +2030,7 @@ export default function FizioApp() {
               {[
                 {l:"Pacienti *",k:"patient",ph:"Emri i pacientit"},
                 {l:"Fizioterapis *",k:"therapist",ph:"Dr. Emri Mbiemri"},
-                {l:"Ã‡mimi për seancë (â‚¬)",k:"price",ph:"65",t:"number"},
+                {l:"Ã‡mimi për seancë (€)",k:"price",ph:"65",t:"number"},
                 {l:"Numri i seancave",k:"sessions",ph:"10",t:"number"},
                 {l:"Data e fillimit",k:"startDate",ph:"",t:"date"},
               ].map(f=>(
@@ -2141,11 +2141,11 @@ export default function FizioApp() {
                 </div>
                 <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginTop:14}}>
                   <div style={{background:"#F0FDF4",borderRadius:10,padding:"10px 12px",textAlign:"center"}}>
-                    <div style={{fontSize:16,fontWeight:700,color:"#15803D"}}>â‚¬{paidVal}</div>
+                    <div style={{fontSize:16,fontWeight:700,color:"#15803D"}}>€{paidVal}</div>
                     <div style={{fontSize:10,color:"#16A34A",marginTop:2}}>E paguar</div>
                   </div>
                   <div style={{background:"#F8FAFF",borderRadius:10,padding:"10px 12px",textAlign:"center"}}>
-                    <div style={{fontSize:16,fontWeight:700,color:"#1A2332"}}>â‚¬{totalVal}</div>
+                    <div style={{fontSize:16,fontWeight:700,color:"#1A2332"}}>€{totalVal}</div>
                     <div style={{fontSize:10,color:"#9DABBE",marginTop:2}}>Total plan</div>
                   </div>
                 </div>
@@ -2207,7 +2207,7 @@ export default function FizioApp() {
           {[{l:"Plane Aktive",v:plans.filter(p=>p.status==="active").length,a:"blue",i:"treatments"},
             {l:"Të Kompletuara",v:plans.filter(p=>p.status==="completed").length,a:"green",i:"check"},
             {l:"Seanca Totale",v:plans.reduce((s,p)=>s+p.done,0),a:"amber",i:"calendar"},
-            {l:"Të Ardhura",v:`â‚¬${plans.reduce((s,p)=>s+p.done*p.price,0).toLocaleString()}`,a:"green",i:"payments"}].map(x=>(
+            {l:"Të Ardhura",v:`€${plans.reduce((s,p)=>s+p.done*p.price,0).toLocaleString()}`,a:"green",i:"payments"}].map(x=>(
             <div key={x.l} style={{background:"#fff",border:"1px solid #E8ECF2",borderRadius:14,padding:"18px 20px"}}>
               <div style={{width:36,height:36,borderRadius:10,background:x.a==="blue"?"#EBF4FF":x.a==="green"?"#F0FDF4":"#FFFBEB",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:12}}>
                 <Icon name={x.i} size={18} color={x.a==="blue"?"#2563EB":x.a==="green"?"#22C55E":"#F59E0B"}/>
@@ -2247,7 +2247,7 @@ export default function FizioApp() {
                 <div style={{padding:"14px 18px"}}>
                   <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:12}}>
                     <div style={{padding:"3px 10px",background:"#F1F3F7",borderRadius:20,fontSize:11,fontWeight:500,color:"#5A6A7E"}}>{p.type}</div>
-                    <div style={{fontSize:11,color:"#9DABBE"}}>â‚¬{p.price}/seancë</div>
+                    <div style={{fontSize:11,color:"#9DABBE"}}>€{p.price}/seancë</div>
                   </div>
                   <div style={{display:"flex",justifyContent:"space-between",marginBottom:6}}>
                     <span style={{fontSize:12,color:"#5A6A7E"}}>Progresi</span>
@@ -2449,7 +2449,7 @@ export default function FizioApp() {
                 <div style={{fontSize:13,color:"#5A6A7E",marginBottom:24}}>Cakto çmimet dhe kohëzgjatjen për çdo shërbim</div>
                 <div style={{background:"#F8FAFF",borderRadius:12,overflow:"hidden",border:"1px solid #E8ECF2",marginBottom:20}}>
                   <div style={{display:"grid",gridTemplateColumns:"2fr 100px 90px 80px",padding:"10px 16px",borderBottom:"1px solid #E8ECF2",fontSize:11,fontWeight:700,color:"#9DABBE",textTransform:"uppercase",letterSpacing:".06em"}}>
-                    <span>Shërbimi</span><span>Ã‡mimi (â‚¬)</span><span>Kohëzgjatja</span><span>Aktiv</span>
+                    <span>Shërbimi</span><span>Ã‡mimi (€)</span><span>Kohëzgjatja</span><span>Aktiv</span>
                   </div>
                   {prices.map(p=>(
                     <div key={p.id} style={{display:"grid",gridTemplateColumns:"2fr 100px 90px 80px",padding:"12px 16px",borderBottom:"1px solid #F1F3F7",alignItems:"center",background:p.active?"transparent":"#FAFAFA"}}
@@ -2457,7 +2457,7 @@ export default function FizioApp() {
                       onMouseLeave={e=>e.currentTarget.style.background=p.active?"transparent":"#FAFAFA"}>
                       <span style={{fontSize:13,fontWeight:500,color:p.active?"#1A2332":"#9DABBE"}}>{p.service}</span>
                       <div style={{display:"flex",alignItems:"center",gap:4}}>
-                        <span style={{fontSize:12,color:"#9DABBE"}}>â‚¬</span>
+                        <span style={{fontSize:12,color:"#9DABBE"}}>€</span>
                         <input type="number" value={p.price} onChange={e=>updatePrice(p.id,"price",parseInt(e.target.value)||0)}
                           style={{width:60,padding:"5px 8px",border:"1px solid #E8ECF2",borderRadius:6,fontSize:12,outline:"none",fontFamily:"'DM Sans',sans-serif",color:"#1A2332",textAlign:"center"}}
                           onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
