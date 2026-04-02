@@ -272,16 +272,16 @@ const LoginPage = ({ onLogin }) => {
           <h2 style={{fontSize:18,fontWeight:600,color:"#1A2332",marginBottom:6}}>Hyr në llogari</h2>
           <p style={{fontSize:13,color:"#9DABBE",marginBottom:24}}>Fut kredencialet e tua</p>
           {err&&<div style={{background:"#FEF2F2",border:"1px solid #FECACA",borderRadius:10,padding:"10px 14px",marginBottom:16,fontSize:12,color:"#991B1B"}}>{err}</div>}
-          <div style={{marginBottom:16}}>
-            <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>EMRI I PÃ‹RDORUESIT</label>
+          <div style={{marginBottom:16,position:"relative"}}>
+            <div style={{position:"absolute",left:12,top:"50%",transform:"translateY(-50%)",pointerEvents:"none",zIndex:1}}><Icon name="person" size={18} color="#9DABBE"/></div>
             <input value={u} onChange={e=>setU(e.target.value)} onKeyDown={e=>e.key==="Enter"&&handleLogin()} placeholder="Emri i përdoruesit"
-              style={{width:"100%",padding:"11px 14px",border:"1.5px solid #E8ECF2",borderRadius:10,fontSize:14,outline:"none",fontFamily:"'DM Sans',sans-serif",color:"#1A2332",boxSizing:"border-box"}}
+              style={{width:"100%",padding:"11px 14px 11px 40px",border:"1.5px solid #E8ECF2",borderRadius:10,fontSize:14,outline:"none",fontFamily:"'DM Sans',sans-serif",color:"#1A2332",boxSizing:"border-box"}}
               onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
           </div>
-          <div style={{marginBottom:24}}>
-            <label style={{fontSize:12,fontWeight:600,color:"#5A6A7E",display:"block",marginBottom:6}}>FJALÃ‹KALIMI</label>
+          <div style={{marginBottom:24,position:"relative"}}>
+            <div style={{position:"absolute",left:12,top:"50%",transform:"translateY(-50%)",pointerEvents:"none",zIndex:1}}><Icon name="lock" size={18} color="#9DABBE"/></div>
             <input type="password" value={p} onChange={e=>setP(e.target.value)} onKeyDown={e=>e.key==="Enter"&&handleLogin()} placeholder="••••••"
-              style={{width:"100%",padding:"11px 14px",border:"1.5px solid #E8ECF2",borderRadius:10,fontSize:14,outline:"none",fontFamily:"'DM Sans',sans-serif",color:"#1A2332",boxSizing:"border-box"}}
+              style={{width:"100%",padding:"11px 14px 11px 40px",border:"1.5px solid #E8ECF2",borderRadius:10,fontSize:14,outline:"none",fontFamily:"'DM Sans',sans-serif",color:"#1A2332",boxSizing:"border-box"}}
               onFocus={e=>e.target.style.borderColor="#2563EB"} onBlur={e=>e.target.style.borderColor="#E8ECF2"}/>
           </div>
           <button onClick={handleLogin} disabled={loading}
