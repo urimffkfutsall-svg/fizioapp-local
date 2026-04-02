@@ -152,7 +152,7 @@ const PinLoginPage = ({ clinics, onLogin, onSwitchToNormal }) => {
 
   const pressKey=(k)=>{
     if(k==="C"){setPin("");setHint("");return;}
-    if(k==="âŒ«"){setPin(p=>p.slice(0,-1));return;}
+    if(k==="⌫"){setPin(p=>p.slice(0,-1));return;}
     if(pin.length>=6) return;
     const next=pin+k;
     setPin(next);
@@ -165,7 +165,7 @@ const PinLoginPage = ({ clinics, onLogin, onSwitchToNormal }) => {
   useEffect(()=>{
     const handler=(e)=>{
       if(e.key>="0"&&e.key<="9") pressKey(e.key);
-      else if(e.key==="Backspace") pressKey("âŒ«");
+      else if(e.key==="Backspace") pressKey("⌫");
       else if(e.key==="Escape") setPin("");
     };
     window.addEventListener("keydown",handler);
@@ -209,8 +209,8 @@ const PinLoginPage = ({ clinics, onLogin, onSwitchToNormal }) => {
 
         {/* Numpad */}
         <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:9,margin:"14px 0"}}>
-          {["1","2","3","4","5","6","7","8","9","C","0","âŒ«"].map(k=>{
-            const isC=k==="C", isBs=k==="âŒ«";
+          {["1","2","3","4","5","6","7","8","9","C","0","⌫"].map(k=>{
+            const isC=k==="C", isBs=k==="⌫";
             return (
               <button key={k} onClick={()=>pressKey(k)} style={{
                 height:56,borderRadius:14,border:"1.5px solid #E8ECF2",
@@ -227,7 +227,7 @@ const PinLoginPage = ({ clinics, onLogin, onSwitchToNormal }) => {
         </div>
 
         <button onClick={onSwitchToNormal} style={{width:"100%",padding:"12px",background:"linear-gradient(135deg,#4A90D9,#2563EB)",color:"#fff",border:"none",borderRadius:12,fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans',sans-serif",marginBottom:12,letterSpacing:".02em"}}>
-          â†µ Kyçu si Administrator
+          Kyçu si Administrator
         </button>
         <div style={{fontSize:10,color:"#9DABBE",textAlign:"center"}}>Tastiera (0–9) • Backspace • Escape për pastrim</div>
       </div>
